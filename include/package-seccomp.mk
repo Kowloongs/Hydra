@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2015-2020 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 PKG_CONFIG_DEPENDS+= CONFIG_KERNEL_SECCOMP
 

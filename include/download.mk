@@ -1,12 +1,10 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2006-2012 OpenWrt.org
-# Copyright (C) 2016 LEDE project
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 PROJECT_GIT = https://git.openwrt.org
 
-OPENWRT_GIT = $(PROJECT_GIT)
-LEDE_GIT = $(PROJECT_GIT)
+HYDRA_GIT = $(PROJECT_GIT)
 
 ifdef PKG_SOURCE_VERSION
   ifndef PKG_VERSION
