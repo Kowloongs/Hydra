@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2006-2020 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/prereq.mk
@@ -15,7 +15,7 @@ $(eval $(call TestHostCommand,working-make, \
 	$(MAKE) -v | grep -E 'Make (4\.[1-9]|[5-9]\.)'))
 
 $(eval $(call TestHostCommand,case-sensitive-fs, \
-	OpenWrt can only be built on a case-sensitive filesystem, \
+	Hydra can only be built on a case-sensitive filesystem, \
 	rm -f $(TMP_DIR)/test.*; touch $(TMP_DIR)/test.fs; \
 		test ! -f $(TMP_DIR)/test.FS))
 
