@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2006-2013 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 menu "Target Images"
 
@@ -221,7 +221,7 @@ menu "Target Images"
 	config GRUB_SERIAL
 		string "Serial port device"
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
-		default "ttyS0"
+		default "HSI0"
 
 	config GRUB_BAUDRATE
 		int "Serial port baud rate"
@@ -243,9 +243,9 @@ menu "Target Images"
 	config GRUB_TIMEOUT
 		string "Seconds to wait before booting the default entry"
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
-		default "5"
+		default "3"
 		help
-		  If you don't know, 5 seconds is a reasonable default.
+		  If you don't know, 3 seconds is a reasonable default.
 
 	config GRUB_TITLE
 		string "Title for the menu entry in GRUB"
@@ -253,7 +253,7 @@ menu "Target Images"
 		default "Hydra"
 		help
 		  This is the title of the GRUB menu entry.
-		  If unspecified, it defaults to OpenWrt.
+		  If unspecified, it defaults to Hydra.
 
 	config ISO_IMAGES
 		bool "Build LiveCD image (ISO)"

@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2006-2014 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 config KERNEL_BUILD_USER
 	string "Custom Kernel Build User Name"
@@ -1104,7 +1104,7 @@ menu "Filesystem ACL and attr support options"
 		  Make using ACLs (e.g. POSIX ACL, NFSv4 ACL) the default
 		  for kernel and packages, except tmpfs, flash filesystems,
 		  and old NFS.  Also enable userspace extended attribute support
-		  by default.  (OpenWrt already has an expection it will be
+		  by default.  (Hydra already has an expection it will be
 		  present in the kernel).
 
 	config KERNEL_FS_POSIX_ACL
