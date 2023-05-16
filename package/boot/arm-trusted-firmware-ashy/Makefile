@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=arm-trusted-firmware-rockchip
+PKG_NAME:=arm-trusted-firmware-ashy
 PKG_VERSION:=2.3
 PKG_RELEASE:=1
 
@@ -24,11 +24,11 @@ MAKE_PATH:=$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/arm-trusted-firmware-rockchip
+define Package/arm-trusted-firmware-ashy
     SECTION:=boot
     CATEGORY:=Boot Loaders
-    TITLE:=ARM Trusted Firmware for Rockchip
-    DEPENDS:=@TARGET_rockchip_armv8
+    TITLE:=ARM Trusted Firmware for Ashy
+    DEPENDS:=@TARGET_ashy_armv8
 endef
 
 define Build/Prepare
@@ -43,7 +43,7 @@ define Build/InstallDev
 	$(CP) $(PKG_BUILD_DIR)/rk*.elf $(STAGING_DIR_IMAGE)/
 endef
 
-define Package/arm-trusted-firmware-rockchip/install
+define Package/arm-trusted-firmware-ashy/install
 endef
 
-$(eval $(call BuildPackage,arm-trusted-firmware-rockchip))
+$(eval $(call BuildPackage,arm-trusted-firmware-ashy))
