@@ -1,4 +1,4 @@
-# Makefile for OpenWrt
+# Makefile for Hydra
 #
 # Copyright (C) 2007-2015 OpenWrt.org
 #

@@ -15,7 +15,7 @@ Signed-off-by: Gabor Juhos <juhosg@openwrt.org>
  	bool
  
 +config IMAGE_CMDLINE_HACK
-+	bool "OpenWrt specific image command line hack"
++	bool "Hydra specific image command line hack"
 +	default n
 +
  config NO_IOPORT_MAP

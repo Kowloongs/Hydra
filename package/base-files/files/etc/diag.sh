@@ -1,5 +1,7 @@
 #!/bin/sh
-# Copyright (C) 2006-2019 OpenWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 . /lib/functions/leds.sh
 

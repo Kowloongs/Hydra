@@ -1,4 +1,6 @@
-# Copyright (C) 2013 OpenWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 get_dt_led_path() {
 	local ledpath

@@ -72,7 +72,7 @@ define Build/mkmylofw_32m
 		newsize='size + pad'; \
 		$(STAGING_DIR_HOST)/bin/mkmylofw \
 		-B WPE72 -i 0x11f6:$(device_id):0x11f6:$(device_id) -r $(revision) \
-		-s 0x2000000 -p0x180000:$$newsize:al:0x80208000:"OpenWrt":$@ \
+		-s 0x2000000 -p0x180000:$$newsize:al:0x80208000:"Hydra":$@ \
 		$@.new
 	@mv $@.new $@
 endef

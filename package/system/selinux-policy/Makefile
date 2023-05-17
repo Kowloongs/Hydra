@@ -23,14 +23,14 @@ include $(INCLUDE_DIR)/package.mk
 define Package/selinux-policy
 	SECTION:=system
 	CATEGORY:=Base system
-	TITLE:=SELinux security policy for OpenWrt
+	TITLE:=SELinux security policy for Hydra
 	URL:=https://git.defensec.nl/?p=selinux-policy.git;a=summary
 	PKGARCH:=all
 endef
 
 define Package/selinux-policy/description
 	Basic SELinux Security Policy designed specifically for
-	OpenWrt and written in Common Intermediate Language.
+	Hydra and written in Common Intermediate Language.
 endef
 
 define Build/Compile

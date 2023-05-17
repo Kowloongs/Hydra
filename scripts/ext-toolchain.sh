@@ -313,7 +313,7 @@ print_config() {
 			echo "Available targets:"                               >&2
 			echo $mktargets                                         >&2
 		else
-			echo -e "Could not find a suitable OpenWrt target for " >&2
+			echo -e "Could not find a suitable Hydra target for "	>&2
 			echo -e "CPU architecture '$cpuarch' - you need to "    >&2
 			echo -e "define one first!"                             >&2
 		fi

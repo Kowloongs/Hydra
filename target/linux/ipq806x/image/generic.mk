@@ -4,7 +4,7 @@ DEVICE_VARS += TPLINK_BOARD_ID
 define Device/kernel-size-migration
   DEVICE_COMPAT_VERSION := 2.0
   DEVICE_COMPAT_MESSAGE := *** Kernel partition size has changed from earlier \
-	versions. You need to sysupgrade with the OpenWrt factory image and \
+	versions. You need to sysupgrade with the Hydra factory image and \
 	use the force flag when image check fails. Settings will be lost. ***
 endef
 

@@ -86,7 +86,7 @@ from SD card. (sdcard.img images are gz-iped to save space. Please extract them 
 ---------------------------------
 * LS1012ARDB
   Start up from bank1, and program firmware to bank2 with below commands.
-  Switch to bank2 to start up OpenWrt.
+  Switch to bank2 to start up Hydra.
 
   => tftp a0000000 <firmware_name>-firmware.bin
   => i2c mw 0x24 0x7 0xfc;i2c mw 0x24 0x3 0xf5
@@ -97,7 +97,7 @@ from SD card. (sdcard.img images are gz-iped to save space. Please extract them 
 
 * LS1043ARDB
   Start up from bank0, and program firmware to bank4 with below commands.
-  Switch to bank4 to start up OpenWrt.
+  Switch to bank4 to start up Hydra.
 
   => tftp a0000000 <firmware_name>-firmware.bin
   => protect off all

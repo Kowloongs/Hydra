@@ -133,7 +133,7 @@ void loader_main(unsigned long reg_a0, unsigned long reg_a1,
 			      unsigned long);
 	int res;
 
-	printf("\n\nOpenWrt kernel loader for BCM63XX\n");
+	printf("\n\nHydra kernel loader for BCM63XX\n");
 	printf("Copyright (C) 2011 Gabor Juhos <juhosg@openwrt.org>\n");
 	printf("Copyright (C) 2014 Jonas Gorski <jogo@openwrt.org>\n");
 	printf("Copyright (C) 2020 Alvaro Fernandez Rojas <noltari@gmail.com>\n");

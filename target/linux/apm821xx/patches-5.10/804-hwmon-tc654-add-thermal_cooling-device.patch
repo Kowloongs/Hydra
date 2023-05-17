@@ -9,7 +9,7 @@ device-tree supported thermal-zone node as a
 cooling device.
 
 I have been using this patch as part of the Netgear WNDR4700
-Centria NAS Router support within OpenWrt since 2016.
+Centria NAS Router support within Hydra since 2016.
 
 Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
 Link: https://lore.kernel.org/r/20220213004733.2421193-1-chunkeey@gmail.com

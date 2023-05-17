@@ -7,7 +7,7 @@
 #
 # sysupgrade-tar image:
 #
-# This is for normal upgrading for OpenWrt.
+# This is for normal upgrading for Hydra.
 # use nand_do_upgrade with CI_KERNPART="firmware"
 #
 # - if the size of new kernel is not equal with the current kernel's
@@ -24,8 +24,8 @@
 #
 # ex:
 #   - stock firmware is installed in the flash and booted with
-#     OpenWrt initramfs image
-#   - kernel partition is increased from 4MiB in OpenWrt in the
+#     Hydra initramfs image
+#   - kernel partition is increased from 4MiB in Hydra in the
 #     future
 #
 # packing TRX + UBI formatted image by tar is needed for image validation

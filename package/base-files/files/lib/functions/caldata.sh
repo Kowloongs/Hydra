@@ -1,4 +1,6 @@
-# Copyright (C) 2019 OpenWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 . /lib/functions.sh
 . /lib/functions/system.sh

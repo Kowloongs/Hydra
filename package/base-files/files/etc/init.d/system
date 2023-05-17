@@ -1,12 +1,14 @@
 #!/bin/sh /etc/rc.common
-# Copyright (C) 2014 OpenWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 START=10
 USE_PROCD=1
 
 validate_system_section() {
 	uci_load_validate system system "$1" "$2" \
-		'hostname:string:OpenWrt' \
+		'hostname:string:Hydra' \
 		'conloglevel:uinteger' \
 		'buffersize:uinteger' \
 		'timezone:string:UTC' \

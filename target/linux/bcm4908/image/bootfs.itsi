@@ -3,7 +3,7 @@
 /dts-v1/;
 
 / {
-	description = "OpenWrt bootfs image";
+	description = "Hydra bootfs image";
 	#address-cells = <1>;
 
 	images {

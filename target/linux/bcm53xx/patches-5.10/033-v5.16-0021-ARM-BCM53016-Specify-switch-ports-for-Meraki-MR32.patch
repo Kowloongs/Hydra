@@ -7,10 +7,10 @@ Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 the switch identifies itself as a BCM53012 (rev 5)...
-This patch has been tested & verified on OpenWrt's
+This patch has been tested & verified on Hydra's
 snapshot with Linux 5.10 (didn't test any older kernels).
 The MR32 is able to "talk to the network" as before with
-OpenWrt's SWITCHDEV b53 driver.
+Hydra's SWITCHDEV b53 driver.
 
 | b53-srab-switch 18007000.ethernet-switch: found switch: BCM53012, rev 5
 | libphy: dsa slave smi: probed

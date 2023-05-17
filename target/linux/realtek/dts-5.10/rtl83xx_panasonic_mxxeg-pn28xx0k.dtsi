@@ -162,11 +162,11 @@
 			 * (0x100000-0x1DFFFFF)
 			 *
 			 * stock firmware images are required to pass
-			 * the checking by the U-Boot, also for OpenWrt
+			 * the checking by the U-Boot, also for Hydra
 			 *
-			 * in OpenWrt:
+			 * in Hydra:
 			 * - 0x100000-0xDFFFFF (13M): stock images
-			 * - 0xE00000-0x1DFFFFF(16M): OpenWrt image
+			 * - 0xE00000-0x1DFFFFF(16M): Hydra image
 			 */
 			partition@100000 {
 				label = "fs_reserved";

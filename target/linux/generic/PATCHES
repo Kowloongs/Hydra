@@ -1,5 +1,5 @@
 The patches-* subdirectories contain the kernel patches applied for every
-OpenWrt target. All patches should be named 'NNN-lowercase_shortname.patch'
+Hydra target. All patches should be named 'NNN-lowercase_shortname.patch'
 and sorted into the following categories:
 
 0xx - upstream backports

@@ -16,7 +16,7 @@ define Build/boot-overlay
 			$@.boot/$(dts).dtb; \
 	)
 	mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
-		-n '$(DEVICE_ID) OpenWrt bootscript' \
+		-n '$(DEVICE_ID) Hydra bootscript' \
 		-d ./bootscript-$(DEVICE_NAME) \
 		$@.boot/6x_bootscript-$(DEVICE_NAME)
 
@@ -40,7 +40,7 @@ endef
 
 define Build/recovery-scr
 	mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
-	-n '$(DEVICE_ID) OpenWrt recovery bootscript' \
+	-n '$(DEVICE_ID) Hydra recovery bootscript' \
 	-d ./recovery-$(DEVICE_NAME) $@
 endef
 
@@ -63,7 +63,7 @@ define Build/imx6-combined-image
 	)
 
 	mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
-		-n '$(DEVICE_ID) OpenWrt bootscript' \
+		-n '$(DEVICE_ID) Hydra bootscript' \
 		-d bootscript-$(DEVICE_NAME) \
 		$@.boot/boot.scr
 

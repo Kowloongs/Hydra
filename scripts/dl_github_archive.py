@@ -396,7 +396,7 @@ class DownloadGitHubTarball(object):
         url = 'https://api.github.com' + path
         headers = {
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'OpenWrt',
+            'User-Agent': 'Hydra',
         }
         req = urllib.request.Request(url, headers=headers)
         sslcontext = ssl._create_unverified_context()

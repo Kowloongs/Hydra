@@ -1,5 +1,5 @@
 The m4/ directory below contains various m4 macros used
-by different packages in the OpenWrt feed.
+by different packages in the Hydra feed.
 
 
 From GNU gettext:
@@ -85,7 +85,7 @@ Check if unaligned memory access works correctly.
   as-unaligned-access.m4
 
 
-From OpenWrt:
+From Hydra:
 Always disable GTK docs.
 
   fake-gtk-doc-check.m4

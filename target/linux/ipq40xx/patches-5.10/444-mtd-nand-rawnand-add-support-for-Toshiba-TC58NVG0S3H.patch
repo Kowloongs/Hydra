@@ -10,7 +10,7 @@ Content-Transfer-Encoding: 8bit
 The Toshiba TC58NVG0S3HTA00 is detected with 64 byte OOB while the flash
 has 128 bytes OOB. This adds a static NAND ID entry to correct this.
 
-Tested on FRITZ!Box 7530 flashed with OpenWrt.
+Tested on FRITZ!Box 7530 flashed with Hydra.
 
 Signed-off-by: Andreas Böhler <dev@aboehler.at>
 (changed id_len to 8, added comment about possible counterfeits)

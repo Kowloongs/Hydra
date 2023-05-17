@@ -8,7 +8,7 @@ Due to CONFIG_KERNEL_XZ symbol, the bootwrapper code tries to
 instruct the mkimage to use the xz compression, which isn't
 supported. This patch forces the gzip compression, which is
 supported and doesn't matter because the generated uImage for
-the apm821xx target gets ignored as the OpenWrt toolchain will
+the apm821xx target gets ignored as the Hydra toolchain will
 do separate U-Boot kernel images for each device individually.
 
 Signed-off-by: Christian Lamparter <chunkeey@gmail.com>

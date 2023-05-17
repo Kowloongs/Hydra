@@ -53,7 +53,7 @@
  * This parser requires the DTS to list partitions in ascending order as
  * expected on the MTD device.
  *
- * Since only the "hard_config" and "soft_config" partitions are used in OpenWRT,
+ * Since only the "hard_config" and "soft_config" partitions are used in Hydra,
  * a minimal working DTS could define only these two partitions dynamically (in
  * the right order, usually hard_config then soft_config).
  *

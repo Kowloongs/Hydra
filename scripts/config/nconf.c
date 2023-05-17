@@ -27,7 +27,7 @@ static const char nconf_global_help[] =
 "   of <?> <h>, or if in a data entry window then press <F1>.\n"
 "\n"
 "\n"
-"OpenWrt config is based on Kernel kconfig\n"
+"Hydra config is based on Kernel kconfig\n"
 "so ipkg packages are referred here as modules.\n"
 "\n"
 "Menu entries\n"

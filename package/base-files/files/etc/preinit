@@ -1,6 +1,7 @@
 #!/bin/sh
-# Copyright (C) 2006-2016 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 [ -z "$PREINIT" ] && exec /sbin/init
 

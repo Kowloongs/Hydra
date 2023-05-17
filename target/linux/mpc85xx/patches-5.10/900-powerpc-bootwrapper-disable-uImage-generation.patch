@@ -5,7 +5,7 @@ Subject: [PATCH] powerpc: bootwrapper: disable uImage generation
 
 Due to CONFIG_KERNEL_XZ symbol, the bootwrapper code tries to
 instruct the mkimage to use the xz compression, which isn't
-supported. This disables the uImage generation, as OpenWrt
+supported. This disables the uImage generation, as Hydra
 generates individual uImages for each board using it's own
 toolchain.
 

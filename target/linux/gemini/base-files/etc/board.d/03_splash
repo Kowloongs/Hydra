@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0-only
-# OpenWRT splash screen if using framebuffer console
+# Hydra splash screen if using framebuffer console
 
 if [ ! -d /sys/class/graphics/fbcon ] ; then
 	exit 0

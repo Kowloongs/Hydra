@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Automated OpenWrt package dependency checker
+# Automated Hydra package dependency checker
 #
 # Copyright (C) 2009-2010 OpenWrt.org
 #

@@ -1,4 +1,4 @@
-echo "CuBox OpenWrt Boot script"
+echo "CuBox Hydra Boot script"
 
 # Set console variable for both UART and HDMI
 setenv console console=ttymxc0,115200 video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24,bpp=32

@@ -33,7 +33,7 @@ benefits of using 64K sectors
 
 Performance:
 time mtd erase firmware
-OpenWrt 5.10 ramips MT7621 w25q128jv 0xfc0000 partition length
+Hydra 5.10 ramips MT7621 w25q128jv 0xfc0000 partition length
 
 Without this patch
 MTD_SPI_NOR_USE_4K_SECTORS=y	|n

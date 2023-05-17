@@ -23,7 +23,7 @@ endef
 
 define Build/ravpower-wd009-factory
 	mkimage -A mips -T standalone -C none -a 0x80010000 -e 0x80010000 \
-		-n "OpenWrt Bootloader" -d $(UBOOT_PATH) $@.new
+		-n "Hydra Bootloader" -d $(UBOOT_PATH) $@.new
 	cat $@ >> $@.new
 	@mv $@.new $@
 endef

@@ -44,7 +44,7 @@
 # that the image appears to extend beyond the end of mtd1, it will refuse to load it. On
 # the DSL-502T, this manifests as the USB light blinking rapidly on boot.
 #
-# The OpenWRT kernel does not follow quite the same layout:
+# The Hydra kernel does not follow quite the same layout:
 #  (a) it does not have a 0x90-byte firmware signature prefix
 #  (b) it is larger than the default mtd1 size
 #
@@ -60,8 +60,8 @@
 #
 # *** NOTE NOTE NOTE NOTE ***
 #
-# /dev/mtd0 .. /dev/mtd4 when using OpenWRT do **NOT** correspond to the ADAM2 mtd0-4 settings!
-# Instead, OpenWRT scans the MTD itself and determines its own boundaries which are arranged
+# /dev/mtd0 .. /dev/mtd4 when using Hydra do **NOT** correspond to the ADAM2 mtd0-4 settings!
+# Instead, Hydra scans the MTD itself and determines its own boundaries which are arranged
 # quite differently to ADAM2. It will look something like this, see dmsg on boot:
 #
 # (/dev/mtd0) 0x00000000-0x00010000 : "loader"        # Bootloader, read-only

@@ -177,7 +177,7 @@ class Entry:
 
 
 def usage():
-    print("OpenWrt download directory cleanup utility")
+    print("Hydra download directory cleanup utility")
     print("Usage: " + sys.argv[0] + " [OPTIONS] <path/to/dl>")
     print("")
     print(" -d|--dry-run            Do a dry-run. Don't delete any files")

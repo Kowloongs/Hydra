@@ -34,7 +34,7 @@ GMAC3: GPHY0 (MII) or GPHY3 (GMII)
 GMAC4: GPHY1 (GMII)
 GMAC5: GPHY1 (MII), RGMII or RMII port
 
-Tested on D-Link DWR966 (xRX330) with OpenWRT.
+Tested on D-Link DWR966 (xRX330) with Hydra.
 
 Signed-off-by: Aleksander Jan Bajkowski <olek2@wp.pl>
 Acked-by: Hauke Mehrtens <hauke@hauke-m.de>

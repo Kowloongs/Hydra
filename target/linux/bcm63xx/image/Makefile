@@ -227,7 +227,7 @@ define Build/cfe-sercomm-crypto
 		--input-file $@ \
 		--key-file $@.key \
 		--output-file $@.ser \
-		--version OpenWrt
+		--version Hydra
 	$(STAGING_DIR_HOST)/bin/openssl enc -md md5 -aes-256-cbc \
 		-in $@ -out $@.enc \
 		-K `cat $@.key` \

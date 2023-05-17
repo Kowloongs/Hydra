@@ -4,7 +4,7 @@ Date: Mon, 13 Jul 2020 23:37:37 +0200
 Subject: [PATCH] scripts: remove dependency on swig
 
 Don't build the libfdt tool, as it has a dependency on swig (which
-OpenWrt does not ship).
+Hydra does not ship).
 
 This requires more hacks, as of-platdata generation does not work
 without it.

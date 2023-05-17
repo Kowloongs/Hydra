@@ -1,9 +1,9 @@
 From 93514afd769c305182beeed1f9c4c46235879ef8 Mon Sep 17 00:00:00 2001
 From: Pawel Dembicki <paweldembicki@gmail.com>
 Date: Sun, 30 Dec 2018 23:24:41 +0100
-Subject: [PATCH] powerpc: mpc85xx: change P2020RDB dts file for OpenWRT
+Subject: [PATCH] powerpc: mpc85xx: change P2020RDB dts file for Hydra
 
-This patch apply chages for OpenWRT in P2020RDB
+This patch apply chages for Hydra in P2020RDB
 dts file.
 
 Signed-off-by: Pawel Dembicki <paweldembicki@gmail.com>

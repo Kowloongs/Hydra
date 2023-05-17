@@ -133,7 +133,7 @@ define Device/unielec_u7623-02
   IMAGE/sysupgrade.itb := append-kernel | fit gzip $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb external-static-with-rootfs | append-metadata
   ARTIFACT/u-boot.bin := append-uboot
 # vendor Preloader seems not to care about SDMMC_BOOT/EMMC_BOOT header,
-# but OpenWrt expects 'SDMM' magic for sysupgrade.
+# but Hydra expects 'SDMM' magic for sysupgrade.
   ARTIFACT/emmc.img.gz := mt7623-mbr sdmmc |\
 			    pad-to $$(UBOOT_OFFSET) | append-bootloader $$(UBOOT_TARGET) |\
 			    pad-to 4M | append-image-stage initramfs-recovery.itb |\

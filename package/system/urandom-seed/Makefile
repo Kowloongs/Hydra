@@ -10,7 +10,7 @@ define Package/urandom-seed
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+getrandom
-  TITLE:=/etc/urandom.seed handling for OpenWrt
+  TITLE:=/etc/urandom.seed handling for Hydra
   URL:=https://openwrt.org/
 endef
 

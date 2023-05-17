@@ -8,7 +8,7 @@ BUILD_KEY="${BUILD_KEY:-key-build}" # TODO unify naming?
 REMOVE_OTER_SIGNATURES="${REMOVE_OTER_SIGNATURES:-1}"
 
 # find all sysupgrade images in TOP_DIR
-# factory images don't need signatures as non OpenWrt system doesn't check them anyway
+# factory images don't need signatures as non Hydra system doesn't check them anyway
 for image in $(find $TOP_DIR -type f -name "*-sysupgrade.bin"); do
 	# check if image actually support metadata
 	if fwtool -i /dev/null "$image"; then

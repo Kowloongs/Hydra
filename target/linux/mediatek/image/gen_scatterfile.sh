@@ -21,7 +21,7 @@ PROJECT=${3%-scatter.txt}
 DEVICENAME="$4"
 
 cat <<EOF
-# OpenWrt eMMC scatter file for ${DEVICENAME}
+# Hydra eMMC scatter file for ${DEVICENAME}
 # For use with SP Flash Tool: https://spflashtool.com/download/
 #
 # Unzip the file system file ${PROJECT}-${IMAGE}.gz before flashing.

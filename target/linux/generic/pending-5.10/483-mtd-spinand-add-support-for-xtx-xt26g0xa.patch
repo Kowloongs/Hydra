@@ -9,7 +9,7 @@ XTX26G04AXXXXX SPI NAND.
 These are 3V, 1G/2G/4Gbit serial SLC NAND flash devices with on-die ECC
 (8bit strength per 512bytes).
 
-Tested on Teltonika RUTX10 flashed with OpenWrt.
+Tested on Teltonika RUTX10 flashed with Hydra.
 
 Datasheets available at
 http://www.xtxtech.com/download/?AId=225

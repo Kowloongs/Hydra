@@ -3,7 +3,7 @@ Subject: init: add CONFIG_MANGLE_BOOTARGS and disable it by default
 
 Enabling this option renames the bootloader supplied root=
 and rootfstype= variables, which might have to be know but
-would break the automatisms OpenWrt uses.
+would break the automatisms Hydra uses.
 
 Signed-off-by: Imre Kaloz <kaloz@openwrt.org>
 ---

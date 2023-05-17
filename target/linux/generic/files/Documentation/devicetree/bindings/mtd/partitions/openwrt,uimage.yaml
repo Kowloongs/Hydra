@@ -4,7 +4,7 @@
 $id: http://devicetree.org/schemas/mtd/partitions/openwrt,uimage.yaml#
 $schema: http://devicetree.org/meta-schemas/core.yaml#
 
-title: OpenWrt variations of U-Boot Image partitions
+title: Hydra variations of U-Boot Image partitions
 
 maintainers:
   - Bjørn Mork <bjorn@mork.no>

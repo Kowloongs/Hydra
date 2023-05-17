@@ -9,7 +9,7 @@ Content-Transfer-Encoding: 8bit
 
 On BCM5301x port 8 requires a fixed link when used.
 
-Years ago when b53 was an OpenWrt downstream driver (with configuration
+Years ago when b53 was an Hydra downstream driver (with configuration
 based on sometimes bugged NVRAM) there was a need for a fixup. In case
 of forcing fixed link for (incorrectly specified) port 5 the code had to
 actually setup port 8 link.

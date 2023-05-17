@@ -96,7 +96,7 @@ define Build/mkmylofw_16m
 		[ $$newsize -lt $$((0x660000)) ] && newsize=0x660000 ; \
 		$(STAGING_DIR_HOST)/bin/mkmylofw \
 			-B WPE72 -i 0x11f6:$(device_id):0x11f6:$(device_id) -r $(revision) \
-			-s 0x1000000 -p0x30000:$$newsize:al:0x80060000:"OpenWRT":$@ \
+			-s 0x1000000 -p0x30000:$$newsize:al:0x80060000:"Hydra":$@ \
 			$@.new
 		@mv $@.new $@
 endef

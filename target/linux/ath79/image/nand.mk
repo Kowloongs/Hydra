@@ -380,7 +380,7 @@ define Device/zyxel_nbg6716
 	ath10k-firmware-qca988x-ct
   RAS_BOARD := NBG6716
   RAS_ROOTFS_SIZE := 29696k
-  RAS_VERSION := "OpenWrt Linux-$(LINUX_VERSION)"
+  RAS_VERSION := "Hydra Linux-$(LINUX_VERSION)"
   KERNEL_SIZE := 4096k
   BLOCKSIZE := 128k
   PAGESIZE := 2048

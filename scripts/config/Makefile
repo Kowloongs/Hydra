@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-only
 # ===========================================================================
-# OpenWrt configuration targets
+# Hydra configuration targets
 
 .PHONY: clean all
 all: conf mconf
@@ -9,7 +9,7 @@ clean:
 
 # This clean-files definition is here to ensure that temporary files from the
 # previous version are removed by make config-clean.
-# It should be emptied after the end of support for OpenWrt 19.07.
+# It should be emptied after the end of support for Hydra 19.07.
 clean-files	:= zconf.tab.c zconf.lex.c zconf.hash.c .tmp_qtcheck
 
 # ===========================================================================

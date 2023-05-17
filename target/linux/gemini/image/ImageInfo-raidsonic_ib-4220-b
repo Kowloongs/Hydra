@@ -1,4 +1,4 @@
-Distribution="OpenWrt"
+Distribution="Hydra"
 Layout="Compact"
 UpgradeImages="zImage rd.gz hddapp.tgz"
 productName="IB-NAS4220-B"

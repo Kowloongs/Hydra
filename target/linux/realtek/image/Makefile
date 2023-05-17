@@ -22,7 +22,7 @@ define Build/dlink-cameo
 endef
 
 define Build/dlink-version
-	echo -n "OpenWrt" >> $@
+	echo -n "Hydra" >> $@
 	dd if=/dev/zero bs=25 count=1 >> $@
 endef
 

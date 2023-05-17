@@ -1,5 +1,5 @@
 These files were taken from the Linux 5.14 Kernel Configuration System and
-modified for the OpenWrt Buildroot:
+modified for the Hydra Buildroot:
  - Removed nconf, gconf, tests and kernel configuration targets.
  - Adjusted the Makefile to compile outside the kernel.
  - Always use default file when running make all{no,mod,yes}config.
@@ -9,12 +9,12 @@ modified for the OpenWrt Buildroot:
  - Don't warn when selecting a symbol with unmet direct dependencies.
  - Don't write auto.conf and other files under include/ directory.
  - Reverted a commit to allow use of '/' & '.' in unquoted config symbols.
-   There are too many of those in OpenWrt right now.
+   There are too many of those in Hydra right now.
  - Reverted a commit that was issuing a warning when there were more than
    one help text.  This is used in a few packages to use different texts
    for the menuconfig help, and the ipkg package description.
  - Reverted an upstream change that avoids writing symbols that are not
-   visible to .config, which breaks OpenWrt busybox's '.config' generation
+   visible to .config, which breaks Hydra busybox's '.config' generation
    logic.
  - Treat recursive dependency as a warning only; add a --fatalrecursive
    option to conf to treat recursive deps as a fatal error.

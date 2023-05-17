@@ -185,7 +185,7 @@ define Build/cfe-sercomm-crypto
 		--input-file $@ \
 		--key-file $@.key \
 		--output-file $@.ser \
-		--version OpenWrt
+		--version Hydra
 	$(STAGING_DIR_HOST)/bin/openssl enc -md md5 -aes-256-cbc \
 		-in $@ -out $@.enc \
 		-K `cat $@.key` \
@@ -209,7 +209,7 @@ define Build/cfe-sercomm-part
 		--input-file $@ \
 		--output-file $@.kernel_rootfs \
 		--part-name kernel_rootfs \
-		--part-version OpenWrt \
+		--part-version Hydra \
 		--rootfs-version $(SERCOMM_VERSION)
 
 	rm -rf $@-rootfs_lib

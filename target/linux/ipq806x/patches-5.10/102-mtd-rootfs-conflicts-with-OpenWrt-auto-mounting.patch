@@ -1,7 +1,7 @@
 From 5001f2e1a325b68dbf225bd17f69a4d3d975cca5 Mon Sep 17 00:00:00 2001
 From: John Crispin <john@phrozen.org>
 Date: Thu, 9 Mar 2017 09:31:44 +0100
-Subject: [PATCH 61/69] mtd: "rootfs" conflicts with OpenWrt auto mounting
+Subject: [PATCH 61/69] mtd: "rootfs" conflicts with Hydra auto mounting
 
 Signed-off-by: John Crispin <john@phrozen.org>
 ---
@@ -15,7 +15,7 @@ Signed-off-by: John Crispin <john@phrozen.org>
  		parts[i].mask_flags = pentry->attr;
  		parts[i].size = le32_to_cpu(pentry->length) * mtd->erasesize;
 +
-+		/* "rootfs" conflicts with OpenWrt auto mounting */
++		/* "rootfs" conflicts with Hydra auto mounting */
 +		if (mtd_type_is_nand(mtd) && !strcmp(name, "rootfs"))
 +			parts[i].name = "ubi";
 +

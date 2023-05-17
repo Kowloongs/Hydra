@@ -3,7 +3,7 @@
 # Copyright (C) 2020 Paul Spooren <mail@aparcar.org>
 #
 ###
-### size_compare - compare size of OpenWrt packages against upstream
+### size_compare - compare size of Hydra packages against upstream
 ###
 ### The script compares locally compiled package with the package indexes
 ### available upstream. This way the storage impact of optimizations or

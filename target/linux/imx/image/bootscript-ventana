@@ -1,4 +1,4 @@
-echo "Gateworks Ventana OpenWrt Boot script v1.02"
+echo "Gateworks Ventana Hydra Boot script v1.02"
 
 # set some defaults
 # set some defaults
@@ -35,7 +35,7 @@ fi
 echo "Booting from ${dtype}..."
 if itest.s "x${dtype}" == "xnand" ; then
 	# fix partition name
-	#  OpenWrt kernel bug prevents partition name of 'rootfs' from booting
+	#  Hydra kernel bug prevents partition name of 'rootfs' from booting
 	#  instead name the partition ubi which is what is looked for by
 	#  procd sysupgrade
 	mtdparts del rootfs && mtdparts add nand0 - ubi
