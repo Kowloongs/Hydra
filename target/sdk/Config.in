@@ -1,11 +1,11 @@
 config SDK
-	bool "Build the OpenWrt SDK"
+	bool "Build the Hydra SDK"
 	depends on !EXTERNAL_TOOLCHAIN
 	default BUILDBOT
 	help
 	  This is essentially a stripped-down version of the buildroot
 	  with a precompiled toolchain. It can be used to develop and
-	  test packages for OpenWrt before including them in the buildroot
+	  test packages for Hydra before including them in the buildroot
 
 config SDK_LLVM_BPF
 	bool "Build the LLVM-BPF toolchain tarball"

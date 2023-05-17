@@ -54,7 +54,7 @@ config OPENSSL_WITH_DEPRECATED
 	default y
 	prompt "Include deprecated APIs (See help for a list of packages that need this)"
 	help
-		Since openssl 1.1.x is still new to openwrt, some packages
+		Since openssl 1.1.x is still new to hydra, some packages
 		requiring this option do not list it as a requirement yet:
 		 * freeswitch-stable, freeswitch, python, python3, squid.
 

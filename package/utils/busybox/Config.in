@@ -8,7 +8,7 @@ config BUSYBOX_CUSTOM
           Note that there are many options here that can result in a build
           that doesn't work properly.  Enabling customization will mark your
           build as "tainted" for the purpose of bug reports.
-          See the variables written to /etc/openwrt_release
+          See the variables written to /etc/hydra_release
 
           Unless you know what you are doing, you should leave this as 'n'
 

@@ -1,8 +1,5 @@
-# Copyright (C) 2006-2012 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 menuconfig PREINITOPT
@@ -18,11 +15,11 @@ config TARGET_PREINIT_SUPPRESS_STDERR
 	default y
 	help
 		Sends stderr to null during preinit.  This is the default behaviour
-		in previous versions of OpenWrt.  This also prevents init process
+		in previous versions of Hydra.  This also prevents init process
 		itself from displaying stderr, however processes launched by init
 		in multiuser through inittab will use the current terminal (e.g.
 		the ash shell launched by inittab will display stderr).  That's
-		the same behaviour as seen in previous version of OpenWrt.
+		the same behaviour as seen in previous version of Hydra.
 
 config TARGET_PREINIT_DISABLE_FAILSAFE
 	bool
@@ -138,8 +135,8 @@ menuconfig INITOPT
 		default y
 		help
 			Prevents showing stderr messages for init command if not already
-			suppressed during preinit.  This is the default behaviour in
-			previous versions of OpenWrt.  Removing this does nothing if
+			suppressed during preinit. This is the default behaviour in
+			previous versions of Hydra. Removing this does nothing if
 			stderr is suppressed during preinit (which is the default).
 
 
@@ -148,9 +145,9 @@ menuconfig VERSIONOPT
 	default n
 	help
 		These options allow to override the version information embedded in
-		the /etc/openwrt_version, /etc/openwrt_release, /etc/banner,
+		the /etc/hydra_version, /etc/hydra_release, /etc/banner,
 		/etc/opkg.conf, and /etc/os-release files. Usually there is no need
-		to set these, but they're useful for release builds or custom OpenWrt
+		to set these, but they're useful for release builds or custom Hydra
 		redistributions that should carry custom version tags.
 
 if VERSIONOPT
@@ -158,10 +155,10 @@ if VERSIONOPT
 	config VERSION_DIST
 		string
 		prompt "Release distribution"
-		default "OpenWrt"
+		default "Hydra"
 		help
 			This is the name of the release distribution.
-			If unspecified, it defaults to OpenWrt.
+			If unspecified, it defaults to Hydra.
 
 	config VERSION_NUMBER
 		string
@@ -183,7 +180,7 @@ if VERSIONOPT
 	config VERSION_REPO
 		string
 		prompt "Release repository"
-		default "https://downloads.openwrt.org/releases/22.03-SNAPSHOT"
+		default "https://github.com/Kowloongs/Hydra"
 		help
 			This is the repository address embedded in the image, it defaults
 			to the trunk snapshot repo; the url may contain the following placeholders:
@@ -192,13 +189,13 @@ if VERSIONOPT
 			 %v .. Configured release version number or "snapshot", lowercase
 			 %C .. Configured release revision code or value of %R, uppercase
 			 %c .. Configured release revision code or value of %R, lowercase
-			 %D .. Distribution name or "OpenWrt", uppercase
-			 %d .. Distribution name or "openwrt", lowercase
+			 %D .. Distribution name or "Hydra", uppercase
+			 %d .. Distribution name or "hydra", lowercase
 			 %T .. Target name
 			 %S .. Target/Subtarget name
 			 %A .. Package architecture
 			 %t .. Build taint flags, e.g. "no-all busybox"
-			 %M .. Manufacturer name or "OpenWrt"
+			 %M .. Manufacturer name or "Ombres"
 			 %P .. Product name or "Generic"
 			 %h .. Hardware revision or "v0"
 
@@ -213,14 +210,14 @@ if VERSIONOPT
 		prompt "Manufacturer name"
 		help
 			This is the manufacturer name embedded in /etc/device_info
-			Useful for OEMs building OpenWrt based firmware
+			Useful for OEMs building Hydra based firmware
 
 	config VERSION_MANUFACTURER_URL
 		string
 		prompt "Manufacturer URL"
 		help
 			This is an URL to the manufacturer's website embedded in /etc/device_info
-			Useful for OEMs building OpenWrt based firmware
+			Useful for OEMs building Hydra based firmware
 
 	config VERSION_BUG_URL
 		string
@@ -239,14 +236,14 @@ if VERSIONOPT
 		prompt "Product name"
 		help
 			This is the product name embedded in /etc/device_info
-			Useful for OEMs building OpenWrt based firmware
+			Useful for OEMs building Hydra based firmware
 
 	config VERSION_HWREV
 		string
 		prompt "Hardware revision"
 		help
 			This is the hardware revision string embedded in /etc/device_info
-			Useful for OEMs building OpenWrt based firmware
+			Useful for OEMs building Hydra based firmware
 
 	config VERSION_FILENAMES
 		bool
