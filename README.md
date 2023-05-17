@@ -81,7 +81,7 @@ For a list of supported devices see the [Hydra Hardware Database](https://openwr
 
 * [Bug Reports](https://bugs.openwrt.org): Report bugs in Hydra
 * [Dev Mailing List](https://lists.openwrt.org/mailman/listinfo/openwrt-devel): Send patches
-* [Dev Chat](https://webchat.oftc.net/#openwrt-devel): Channel `#openwrt-devel` on **oftc.net**.
+* [Dev Chat](https://webchat.oftc.net/#openwrt-devel): Channel `#Hydra-devel` on **oftc.net**.
 
 ## License
 
