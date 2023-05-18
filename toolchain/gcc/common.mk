@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2002-2003 Erik Andersen <andersen@uclibc.org>
-# Copyright (C) 2004 Manuel Novoa III <mjn3@uclibc.org>
-# Copyright (C) 2005-2006 Felix Fietkau <nbd@nbd.name>
-# Copyright (C) 2006-2014 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

@@ -100,7 +100,7 @@
 			};
 
 			/*
-			 * use 2x OS partitions in OpenWrt
+			 * use 2x OS partitions in Hydra
 			 *
 			 * 0x2A0000-0x94FFFF: RUNTIME
 			 * 0x950000-0xFFFFFF: RUNTIME2 (not used in stock)

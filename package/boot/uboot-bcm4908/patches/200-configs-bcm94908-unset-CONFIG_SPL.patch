@@ -10,9 +10,9 @@ Fortunately in most cases there is no need to replace SPL or TPL while
 flashing a new firmware.
 
 Compiling SPL for BCM4908 seems to fail with non-Broadcom toolchain:
-aarch64-openwrt-linux-musl-ld.bfd: u-boot-spl section `.u_boot_list' will not fit in region `.sram'
-aarch64-openwrt-linux-musl-ld.bfd: section .bss VMA [00000000822b9000,00000000822b93ef] overlaps section .u_boot_list VMA [00000000822b8f60,00000000822b9a87]
-aarch64-openwrt-linux-musl-ld.bfd: region `.sram' overflowed by 2696 bytes
+aarch64-hydra-linux-musl-ld.bfd: u-boot-spl section `.u_boot_list' will not fit in region `.sram'
+aarch64-hydra-linux-musl-ld.bfd: section .bss VMA [00000000822b9000,00000000822b93ef] overlaps section .u_boot_list VMA [00000000822b8f60,00000000822b9a87]
+aarch64-hydra-linux-musl-ld.bfd: region `.sram' overflowed by 2696 bytes
 
 It also requires hashtable.h which has to be generated using some
 Broadcom's custom perl script that isn't integrated as this point.

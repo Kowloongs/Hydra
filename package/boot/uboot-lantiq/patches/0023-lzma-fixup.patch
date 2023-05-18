@@ -1,17 +1,3 @@
-From: Antonios Vamporakis <ant@area128.com>
-Date: Tue, 31 Dec 2013 01:05:42 +0100
-Subject: [PATCH] lzma: fix buffer bound check error
-
-Variable uncompressedSize references the space available, while outSizeFull is
-the actual expected uncompressed size. Using the wrong value causes LzmaDecode
-to return SZ_ERROR_INPUT_EOF. Problem was introduced in commit afca294. While
-at it add additional debug message.
-
-Signed-off-by: Antonios Vamporakis <ant@area128.com>
-CC: Kees Cook <keescook@chromium.org>
-CC: Simon Glass <sjg@chromium.org>
-CC: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
-CC: Luka Perkov <luka@openwrt.org>
 ---
  lib/lzma/LzmaTools.c | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)

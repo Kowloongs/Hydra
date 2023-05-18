@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2014-2016 OpenWrt.org
-# Copyright (C) 2016 LEDE-Project.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 [ -e /etc/config/ubootenv ] && exit 0

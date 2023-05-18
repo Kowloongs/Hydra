@@ -1,11 +1,3 @@
-From 11553b0de8992ded6240d034bd49f561d17bea53 Mon Sep 17 00:00:00 2001
-From: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
-Date: Thu, 13 Jun 2013 01:18:02 +0200
-Subject: MIPS: add support for Lantiq XWAY SoCs
-
-Signed-off-by: Luka Perkov <luka@openwrt.org>
-Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
-
 --- a/.gitignore
 +++ b/.gitignore
 @@ -49,6 +49,13 @@

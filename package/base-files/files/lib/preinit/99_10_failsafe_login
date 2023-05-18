@@ -1,5 +1,6 @@
-# Copyright (C) 2006-2015 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 failsafe_shell() {
 	local console="$(sed -e 's/ /\n/g' /proc/cmdline | grep '^console=' | head -1 | sed -e 's/^console=//' -e 's/,.*//')"

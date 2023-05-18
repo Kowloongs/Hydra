@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (C) 2011-2012 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 _ubootenv_add_uci_config() {

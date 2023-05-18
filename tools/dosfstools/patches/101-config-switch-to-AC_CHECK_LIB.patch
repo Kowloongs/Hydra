@@ -3,7 +3,7 @@ From: David Bauer <mail@david-bauer.net>
 Date: Mon, 16 Jan 2023 01:29:22 +0100
 Subject: [PATCH] config: switch to AC_CHECK_LIB
 
-This fixes spurious build-errors on OpenWrt, where the AM_ICONV macro
+This fixes spurious build-errors on Hydra, where the AM_ICONV macro
 is undefined while invoking autoconfig. Later in the build, the ICONV
 LDOPTIONS are set to @LIBICONV@, failing the build.
 

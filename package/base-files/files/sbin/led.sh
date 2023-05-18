@@ -1,5 +1,7 @@
 #!/bin/sh
-# (C) 2008 openwrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 . /lib/functions.sh
 ACTION=$1

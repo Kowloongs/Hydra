@@ -1,7 +1,7 @@
 #!/bin/sh
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2013 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 set -ex
 [ $# -eq 6 ] || {

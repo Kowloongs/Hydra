@@ -1,7 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2013-2016 OpenWrt.org
-# Copyright (C) 2016 Yousong Zhou
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk

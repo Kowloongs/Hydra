@@ -36,7 +36,7 @@ define Package/base-files
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+netifd +libc +jsonfilter +SIGNED_PACKAGES:usign +SIGNED_PACKAGES:openwrt-keyring +NAND_SUPPORT:ubi-utils +fstools +fwtool
-  TITLE:=Base filesystem for OpenWrt
+  TITLE:=Base filesystem for Hydra
   URL:=http://openwrt.org/
   VERSION:=$(PKG_RELEASE)-$(REVISION)
 endef
@@ -67,7 +67,7 @@ $(call $(TARGET)/conffiles)
 endef
 
 define Package/base-files/description
- This package contains a base filesystem and system scripts for OpenWrt.
+ This package contains a base filesystem and system scripts for Hydra.
 endef
 
 define ImageConfigOptions

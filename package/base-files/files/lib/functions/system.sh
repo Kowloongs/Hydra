@@ -1,4 +1,6 @@
-# Copyright (C) 2006-2013 OpenWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 . /lib/functions.sh
 . /usr/share/libubox/jshn.sh

@@ -4,7 +4,7 @@ Date: Tue, 14 Jul 2020 22:44:22 +0200
 Subject: [PATCH] spl: remove dtoc of-pdata generation
 
 Remove the dtoc of-pdata generation. This generation is dependant on
-libpython-dev. As OpenWrt does not ship with this dependency, use
+libpython-dev. As Hydra does not ship with this dependency, use
 pre-generated pdata files and remove the generation from the
 build-process.
 

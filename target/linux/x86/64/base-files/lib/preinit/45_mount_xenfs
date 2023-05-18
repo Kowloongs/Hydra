@@ -1,4 +1,6 @@
-# Copyright (C) 2010 OpenWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 do_mount_xenfs() {
 	grep -q xenfs /proc/filesystems && \

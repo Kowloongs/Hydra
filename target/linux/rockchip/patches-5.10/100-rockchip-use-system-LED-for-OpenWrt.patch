@@ -1,7 +1,7 @@
 From 6731d2c9039fbe1ecf21915eab3acee0a999508a Mon Sep 17 00:00:00 2001
 From: David Bauer <mail@david-bauer.net>
 Date: Fri, 10 Jul 2020 21:38:20 +0200
-Subject: [PATCH] rockchip: use system LED for OpenWrt
+Subject: [PATCH] rockchip: use system LED for Hydra
 
 Use the SYS LED on the casing for showing system status.
 

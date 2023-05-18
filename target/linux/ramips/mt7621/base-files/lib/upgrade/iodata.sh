@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 . /lib/functions.sh
@@ -13,7 +13,7 @@ iodata_mstc_prepare_fail() {
 # I-O DATA devices manufactured by MSTC (MitraStar Technology Corp.)
 # have two important flags:
 # - bootnum: switch between two os images
-#     use 1st image in OpenWrt
+#     use 1st image in Hydra
 # - debugflag: enable/disable debug
 #     users can interrupt Z-Loader for recovering the device if enabled
 #

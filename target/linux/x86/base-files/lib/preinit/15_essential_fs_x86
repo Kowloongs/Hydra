@@ -1,5 +1,6 @@
-# Copyright (C) 2006-2010 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 do_mount_procfs() {
 	mount -o noatime -t proc none /proc

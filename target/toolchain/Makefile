@@ -1,10 +1,5 @@
 #
-# Copyright (C) 2008-2009 Industrie Dial Face S.p.A.
-#               Luigi 'Comio' Mantellini <luigi.mantellini@idf-hit.com>
-# Copyright (C) 2006-2008 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk

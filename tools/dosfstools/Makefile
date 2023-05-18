@@ -1,10 +1,7 @@
 #
-# Copyright (C) 2012-2015 OpenWrt.org
-# Copyright (C) 2016 LEDE-Project.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dosfstools

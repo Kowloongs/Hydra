@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2010 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 PART_NAME=firmware

@@ -1,11 +1,3 @@
-From 1da5479d59b39d7931a2b0efabdfa314f6788b6d Mon Sep 17 00:00:00 2001
-From: Luka Perkov <luka@openwrt.org>
-Date: Sat, 2 Mar 2013 23:34:00 +0100
-Subject: tools: add some helper tools for Lantiq SoCs
-
-Signed-off-by: Luka Perkov Luka Perkov <luka@openwrt.org>
-Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
-
 --- /dev/null
 +++ b/tools/gct.pl
 @@ -0,0 +1,155 @@

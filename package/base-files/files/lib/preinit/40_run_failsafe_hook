@@ -1,5 +1,6 @@
-# Copyright (C) 2006-2010 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 run_failsafe_hook() {
     [ "$pi_preinit_no_failsafe" = "y" ] && return

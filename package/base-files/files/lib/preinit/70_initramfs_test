@@ -1,5 +1,6 @@
-# Copyright (C) 2006 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 initramfs_test() {
 	if [ -n "$INITRAMFS" ]; then

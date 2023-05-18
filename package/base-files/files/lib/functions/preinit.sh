@@ -1,5 +1,6 @@
-# Copyright (C) 2006-2013 OpenWrt.org
-# Copyright (C) 2010 Vertical Communications
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 boot_hook_splice_start() {
 	export -n PI_HOOK_SPLICE=1

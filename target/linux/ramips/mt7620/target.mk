@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2009 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 SUBTARGET:=mt7620
