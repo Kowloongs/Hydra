@@ -73,7 +73,7 @@ config TARGET_PREINIT_IFNAME
 config TARGET_PREINIT_IP
 	string
 	prompt "IP address for preinit network messages" if PREINITOPT
-	default "192.168.1.1"
+	default "192.168.100.1"
 	help
 		IP address used to configure interface for preinit network
 		messages, including failsafe messages
@@ -89,7 +89,7 @@ config TARGET_PREINIT_NETMASK
 config TARGET_PREINIT_BROADCAST
 	string
 	prompt "Broadcast address for preinit network messages" if PREINITOPT
-	default "192.168.1.255"
+	default "192.168.100.255"
 	help
 		Broadcast address to which to send preinit network messages, as
 		as failsafe messages
@@ -163,6 +163,7 @@ if VERSIONOPT
 	config VERSION_NUMBER
 		string
 		prompt "Release version number"
+		default "1.0.1"
 		help
 			This is the release version number embedded in the image.
 			If unspecified, it defaults to SNAPSHOT for the master branch
@@ -171,6 +172,7 @@ if VERSIONOPT
 	config VERSION_CODE
 		string
 		prompt "Release version code"
+		default "VERSIFY"
 		help
 			This is the release version code embedded in the image.
 			If unspecified, it defaults to a revision number describing the
@@ -180,7 +182,7 @@ if VERSIONOPT
 	config VERSION_REPO
 		string
 		prompt "Release repository"
-		default "https://github.com/Kowloongs/Hydra"
+		default "https://downloads.openwrt.org/snapshots"
 		help
 			This is the repository address embedded in the image, it defaults
 			to the trunk snapshot repo; the url may contain the following placeholders:
@@ -202,12 +204,14 @@ if VERSIONOPT
 	config VERSION_HOME_URL
 		string
 		prompt "Release Homepage"
+		default "https://github.com/Kowloongs/Hydra"
 		help
 			This is the release version homepage
 
 	config VERSION_MANUFACTURER
 		string
 		prompt "Manufacturer name"
+		default "Ombres"
 		help
 			This is the manufacturer name embedded in /etc/device_info
 			Useful for OEMs building Hydra based firmware
@@ -215,6 +219,7 @@ if VERSIONOPT
 	config VERSION_MANUFACTURER_URL
 		string
 		prompt "Manufacturer URL"
+		default "https://www.asytumn.com"
 		help
 			This is an URL to the manufacturer's website embedded in /etc/device_info
 			Useful for OEMs building Hydra based firmware
@@ -222,18 +227,21 @@ if VERSIONOPT
 	config VERSION_BUG_URL
 		string
 		prompt "Bug reporting URL"
+		default "https://github.com/Kowloongs/Hydra"
 		help
 			This is an URL to provide users for providing bug reports
 
 	config VERSION_SUPPORT_URL
 		string
 		prompt "Support URL"
+		default "loongs@syuusui.com"
 		help
 			This an URL to provide users seeking support
 
 	config VERSION_PRODUCT
 		string
 		prompt "Product name"
+		default "MonoPI"
 		help
 			This is the product name embedded in /etc/device_info
 			Useful for OEMs building Hydra based firmware
@@ -241,6 +249,7 @@ if VERSIONOPT
 	config VERSION_HWREV
 		string
 		prompt "Hardware revision"
+		default "Hedge"
 		help
 			This is the hardware revision string embedded in /etc/device_info
 			Useful for OEMs building Hydra based firmware
