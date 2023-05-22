@@ -1,7 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2006-2010 OpenWrt.org
-# Copyright (C) 2016 LEDE Project
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 ifneq ($(__rules_inc),1)
 __rules_inc=1
