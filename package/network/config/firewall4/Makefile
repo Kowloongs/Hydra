@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 Jo-Philipp Wich <jo@mein.io>
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
