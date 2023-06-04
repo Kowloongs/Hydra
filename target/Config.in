@@ -150,6 +150,10 @@ config arm_v6
 config arm_v7
 	bool
 
+config ashy
+	select ARCH_64BIT
+	bool
+
 config i386
 	bool
 
@@ -214,6 +218,7 @@ config ARCH
 	default "arceb"     if arceb
 	default "arm"       if arm
 	default "armeb"     if armeb
+	default "aarch64"   if ashy
 	default "i386"      if i386
 	default "i686"      if i686
 	default "m68k"      if m68k
