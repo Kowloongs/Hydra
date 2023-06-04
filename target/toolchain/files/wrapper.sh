@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# 2009 (C) Copyright Industrie Dial Face S.p.A.
-#          Luigi 'Comio' Mantellini <luigi.mantellini@idf-hit.com>
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 # Based on original idea from WindRiver
 #
