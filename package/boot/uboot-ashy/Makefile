@@ -23,19 +23,19 @@ endef
 
 # RK3568 Boards
 
-define U-Boot/monopi-r4s-rk3568
+define U-Boot/monopi-r5s-rk3568
   BUILD_SUBTARGET:=armv8
-  NAME:=Hedge-MonoPi-R4S
+  NAME:=Hedge-MonoPi-R5S
   BUILD_DEVICES:= \
-    monopi-r4s
-  DEPENDS:=+PACKAGE_u-boot-monopi-r4s-rk3568:arm-trusted-firmware-ashy
+    monopi-r5s
+  DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-ashy
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
   ATF:=rk3568_bl31_v1.28.elf
   DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 UBOOT_TARGETS := \
-  monopi-r4s-rk3568
+  monopi-r5s-rk3568
 
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
