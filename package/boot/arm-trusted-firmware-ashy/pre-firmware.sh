@@ -1,5 +1,7 @@
-#!/bin/bash
-# Copyright (C) 2021 ImmortalWrt.org
+#! /bin/bash
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 ACTION="$1"
 VARIANT="$2"
@@ -18,8 +20,8 @@ case "$VARIANT" in
 	LOADER="rk33/rk3399_miniloader_v1.26.bin"
 	;;
 "rk3568")
-	ATF="rk35/rk3568_bl31_v1.28.elf"
-	DDR="rk35/rk3568_ddr_1560MHz_v1.13.bin"
+	ATF="rk35/rk3568_bl31_v1.42.elf"
+	DDR="rk35/rk3568_ddr_1560MHz_v1.16.bin"
 	;;
 "rk3588")
 	ATF="rk35/rk3588_bl31_v1.27.elf"

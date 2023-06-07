@@ -7,7 +7,7 @@ define Device/ombres_monopi-r5s
   DEVICE_MODEL := MonoPi R5S
   SOC := rk3568
   UBOOT_DEVICE_NAME := monopi-r5s-rk3568
-  IMAGE/sysupgrade.img.gz := boot-common | boot-script monopi-r5s | pine64-img | gzip | append-metadata
-  DEVICE_PACKAGES := kmod-r8125
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script-bin | rockchip-gpt-img | gzip | append-metadata
+  DEVICE_PACKAGES := -urngd
 endef
 TARGET_DEVICES += ombres_monopi-r5s
