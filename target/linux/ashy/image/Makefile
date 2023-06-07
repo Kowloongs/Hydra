@@ -13,12 +13,12 @@ endef
 
 ### Image scripts ###
 define Build/boot-common
-	# This creates a new folder copies the dtb (as rockchip.dtb) 
+	# This creates a new folder copies the dtb (as ashy.dtb)
 	# and the kernel image (as kernel.img)
 	rm -fR $@.boot
 	mkdir -p $@.boot
 
-	$(CP) $(DTS_DIR)/$(DEVICE_DTS).dtb $@.boot/rockchip.dtb
+	$(CP) $(DTS_DIR)/$(DEVICE_DTS).dtb $@.boot/ashy.dtb
 	$(CP) $(IMAGE_KERNEL) $@.boot/kernel.img
 endef
 
@@ -52,7 +52,7 @@ define Device/Default
   PROFILES := Default
   KERNEL := kernel-bin
   IMAGES := sysupgrade.img.gz
-  DEVICE_DTS = rockchip/$$(SOC)-$(lastword $(subst _, ,$(1)))
+  DEVICE_DTS = ashy/$$(SOC)-$(lastword $(subst _, ,$(1)))
 endef
 
 include $(SUBTARGET).mk
