@@ -1,5 +1,8 @@
-#!/bin/sh
-# Copyright (C) 2006-2012 OpenWrt.org
+#! /bin/sh
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
+
 set -e -x
 if [ $# -ne 5 ] && [ $# -ne 6 ]; then
     echo "SYNTAX: $0 <file> <kernel size> <kernel directory> <rootfs size> <rootfs image>"
