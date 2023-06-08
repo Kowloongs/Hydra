@@ -27,7 +27,7 @@ define Package/arm-trusted-firmware-ashy
     SECTION:=boot
     CATEGORY:=Boot Loaders
     TITLE:=ARM Trusted Firmware for Ashy
-    DEPENDS:=@TARGET_rockchip_armv8
+    DEPENDS:=@TARGET_ashy_armv8
     VARIANT:=rk3568
 endef
 
