@@ -256,30 +256,30 @@ menu "Target Images"
 		  If unspecified, it defaults to Hydra.
 
 	config ISO_IMAGES
-		bool "Build LiveCD image (ISO)"
+		bool "Build LiveCD Image (ISO)"
 		depends on TARGET_x86
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
 
 	config VDI_IMAGES
-		bool "Build VirtualBox image files (VDI)"
+		bool "Build VirtualBox Image files (VDI)"
 		depends on TARGET_x86
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
 		select PACKAGE_kmod-e1000
 
 	config VMDK_IMAGES
-		bool "Build VMware image files (VMDK)"
+		bool "Build VMware Image files (VMDK)"
 		depends on TARGET_x86
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
 		select PACKAGE_kmod-e1000
 
 	config VHDX_IMAGES
-		bool "Build Hyper-V image files (VHDX)"
+		bool "Build Hyper-V Image files (VHDX)"
 		depends on TARGET_x86
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
 		select PACKAGE_kmod-e1000
 
 	config TARGET_IMAGES_GZIP
-		bool "GZip images"
+		bool "GZip Images"
 		depends on TARGET_ROOTFS_EXT4FS || TARGET_x86 || TARGET_armvirt || TARGET_malta
 		default y
 
@@ -293,11 +293,13 @@ menu "Target Images"
 		depends on USES_BOOT_PART
 		default 8 if TARGET_apm821xx_sata
 		default 64 if TARGET_bcm27xx
+		default 64 if TARGET_ashy
 		default 16
 
 	config TARGET_ROOTFS_PARTSIZE
 		int "Root filesystem partition size (in MiB)"
 		depends on USES_ROOTFS_PART || TARGET_ROOTFS_EXT4FS
+		default 256 if TARGET_ashy
 		default 104
 		help
 		  Select the root filesystem partition size.
