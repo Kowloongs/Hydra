@@ -14,7 +14,7 @@ PKG_SOURCE_URL:=https://github.com/SELinuxProject/selinux/releases/download/$(PK
 PKG_HASH:=4199040ced8a81f2ddd0522b4faf2aba62fc821473f4051dc8474fb1c4a01078
 PKG_INSTALL:=1
 HOST_BUILD_DEPENDS:=libsemanage/host gettext-full/host
-PKG_BUILD_DEPENDS:=BUSYBOX_CONFIG_PAM:libpam gettext-full/host
+PKG_BUILD_DEPENDS:=gettext-full/host
 
 PKG_MAINTAINER:=Thomas Petazzoni <thomas.petazzoni@bootlin.com>
 PKG_CPE_ID:=cpe:/a:selinuxproject:policycoreutils
@@ -75,11 +75,11 @@ ALTS_setfiles:=300:/sbin/restorecon:/sbin/policycoreutils-setfiles 300:/sbin/set
 
 DEPENDS_genhomedircon:=+libsemanage $(INTL_DEPENDS)
 DEPENDS_load_policy:=+libselinux $(INTL_DEPENDS)
-DEPENDS_newrole:=+libselinux +libaudit +BUSYBOX_CONFIG_PAM:libpam $(INTL_DEPENDS)
+DEPENDS_newrole:=+libselinux +libaudit $(INTL_DEPENDS)
 DEPENDS_open_init_pty:=$(INTL_DEPENDS)
 DEPENDS_pp:=+libsepol $(INTL_DEPENDS)
 DEPENDS_restorecon_xattr:=+libselinux +libsepol +libaudit $(INTL_DEPENDS)
-DEPENDS_run_init:=+libselinux +libaudit +BUSYBOX_CONFIG_PAM:libpam $(INTL_DEPENDS)
+DEPENDS_run_init:=+libselinux +libaudi $(INTL_DEPENDS)
 DEPENDS_secon:=+libselinux $(INTL_DEPENDS)
 DEPENDS_semanage:=+libsemanage
 DEPENDS_semodule:=+libsemanage $(INTL_DEPENDS)
