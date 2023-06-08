@@ -8,7 +8,7 @@ CONFIG_HOST_OS_LINUX=y
 # CONFIG_HOST_OS_MACOS is not set
 # CONFIG_TARGET_sunxi is not set
 # CONFIG_TARGET_apm821xx is not set
-CONFIG_TARGET_ashy=y
+# CONFIG_TARGET_ashy is not set
 # CONFIG_TARGET_ath25 is not set
 # CONFIG_TARGET_ath79 is not set
 # CONFIG_TARGET_bcm27xx is not set
@@ -39,21 +39,21 @@ CONFIG_TARGET_ashy=y
 # CONFIG_TARGET_ipq40xx is not set
 # CONFIG_TARGET_ipq806x is not set
 # CONFIG_TARGET_realtek is not set
-# CONFIG_TARGET_rockchip is not set
+CONFIG_TARGET_rockchip=y
 # CONFIG_TARGET_archs38 is not set
 # CONFIG_TARGET_omap is not set
 # CONFIG_TARGET_uml is not set
 # CONFIG_TARGET_zynq is not set
 # CONFIG_TARGET_x86 is not set
-CONFIG_TARGET_ashy_armv8=y
+CONFIG_TARGET_rockchip_armv8=y
 # CONFIG_TARGET_MULTI_PROFILE is not set
-CONFIG_TARGET_ashy_armv8_DEVICE_friendlyarm_nanopi-r2s=y
-# CONFIG_TARGET_ashy_armv8_DEVICE_friendlyarm_nanopi-r4s is not set
-# CONFIG_TARGET_ashy_armv8_DEVICE_pine64_rockpro64 is not set
-# CONFIG_TARGET_ashy_armv8_DEVICE_radxa_rock-pi-4a is not set
+CONFIG_TARGET_rockchip_armv8_DEVICE_friendlyarm_nanopi-r2s=y
+# CONFIG_TARGET_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s is not set
+# CONFIG_TARGET_rockchip_armv8_DEVICE_pine64_rockpro64 is not set
+# CONFIG_TARGET_rockchip_armv8_DEVICE_radxa_rock-pi-4a is not set
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_HAS_DEVICES=y
-CONFIG_TARGET_BOARD="ashy"
+CONFIG_TARGET_BOARD="rockchip"
 CONFIG_TARGET_SUBTARGET="armv8"
 CONFIG_TARGET_PROFILE="DEVICE_friendlyarm_nanopi-r2s"
 CONFIG_TARGET_ARCH_PACKAGES="aarch64_generic"
@@ -135,13 +135,13 @@ CONFIG_TARGET_ROOTFS_TARGZ=y
 #
 CONFIG_TARGET_ROOTFS_EXT4FS=y
 CONFIG_TARGET_EXT4_RESERVED_PCT=1
-CONFIG_TARGET_EXT4_BLOCKSIZE_4K=y
-# CONFIG_TARGET_EXT4_BLOCKSIZE_2K is not set
+# CONFIG_TARGET_EXT4_BLOCKSIZE_4K is not set
+CONFIG_TARGET_EXT4_BLOCKSIZE_2K=y
 # CONFIG_TARGET_EXT4_BLOCKSIZE_1K is not set
-CONFIG_TARGET_EXT4_BLOCKSIZE=4096
-# CONFIG_TARGET_EXT4_JOURNAL is not set
+CONFIG_TARGET_EXT4_BLOCKSIZE=2048
+CONFIG_TARGET_EXT4_JOURNAL=y
 CONFIG_TARGET_ROOTFS_SQUASHFS=y
-CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
+CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=512
 CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
 CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
 CONFIG_TARGET_IMAGES_GZIP=y
@@ -149,8 +149,8 @@ CONFIG_TARGET_IMAGES_GZIP=y
 #
 # Image Options
 #
-CONFIG_TARGET_KERNEL_PARTSIZE=32
-CONFIG_TARGET_ROOTFS_PARTSIZE=128
+CONFIG_TARGET_KERNEL_PARTSIZE=64
+CONFIG_TARGET_ROOTFS_PARTSIZE=512
 CONFIG_TARGET_ROOTFS_PERSIST_VAR=y
 # end of Target Images
 
@@ -367,7 +367,7 @@ CONFIG_SECCOMP=y
 # end of Global build settings
 
 CONFIG_DEVEL=y
-# CONFIG_BROKEN is not set
+CONFIG_BROKEN=y
 CONFIG_BINARY_FOLDER=""
 CONFIG_DOWNLOAD_FOLDER=""
 CONFIG_LOCALMIRROR=""
@@ -375,14 +375,14 @@ CONFIG_AUTOREBUILD=y
 CONFIG_AUTOREMOVE=y
 CONFIG_BUILD_SUFFIX=""
 CONFIG_TARGET_ROOTFS_DIR=""
-# CONFIG_CCACHE is not set
+CONFIG_CCACHE=y
 CONFIG_CCACHE_DIR=""
 CONFIG_KERNEL_CFLAGS=""
 CONFIG_EXTERNAL_KERNEL_TREE=""
 CONFIG_KERNEL_GIT_CLONE_URI=""
 CONFIG_BUILD_LOG=y
 CONFIG_BUILD_LOG_DIR=""
-# CONFIG_SRC_TREE_OVERRIDE is not set
+CONFIG_SRC_TREE_OVERRIDE=y
 CONFIG_EXTRA_OPTIMIZATION="-fno-caller-saves -fno-plt"
 CONFIG_TARGET_OPTIONS=y
 CONFIG_TARGET_OPTIMIZATION="-Os -pipe -mcpu=generic"
@@ -413,6 +413,7 @@ CONFIG_EXTRA_GCC_CONFIG_OPTIONS=""
 # CONFIG_GCC_DEFAULT_SSP is not set
 # CONFIG_SJLJ_EXCEPTIONS is not set
 # CONFIG_INSTALL_GFORTRAN is not set
+# CONFIG_INSTALL_GCCGO is not set
 
 #
 # C Library
@@ -455,7 +456,7 @@ CONFIG_TARGET_INIT_CMD="/sbin/init"
 CONFIG_TARGET_INIT_SUPPRESS_STDERR=y
 CONFIG_VERSIONOPT=y
 CONFIG_VERSION_DIST="Hydra"
-CONFIG_VERSION_NUMBER="1.0.8"
+CONFIG_VERSION_NUMBER="1.0.9"
 CONFIG_VERSION_CODE="Versify"
 CONFIG_VERSION_REPO="https://downloads.openwrt.org/releases/22.03-SNAPSHOT"
 CONFIG_VERSION_HOME_URL="https://github.com/Kowloongs/Hydra"
@@ -1710,7 +1711,7 @@ CONFIG_ZABBIX_POSTGRESQL=y
 #
 # Boot Loaders
 #
-CONFIG_PACKAGE_arm-trusted-firmware-ashy=y
+CONFIG_PACKAGE_arm-trusted-firmware-rockchip=y
 CONFIG_PACKAGE_u-boot-nanopi-r2s-rk3328=y
 # end of Boot Loaders
 
@@ -4352,6 +4353,7 @@ CONFIG_PACKAGE_zlib=y
 #
 CONFIG_PACKAGE_luci=y
 # CONFIG_PACKAGE_luci-lib-docker is not set
+# CONFIG_PACKAGE_luci-light is not set
 # CONFIG_PACKAGE_luci-nginx is not set
 # CONFIG_PACKAGE_luci-ssl is not set
 # CONFIG_PACKAGE_luci-ssl-nginx is not set
@@ -4407,6 +4409,7 @@ CONFIG_LUCI_LANG_zh_Hant=y
 
 CONFIG_PACKAGE_luci-compat=y
 CONFIG_PACKAGE_luci-mod-admin-full=y
+CONFIG_PACKAGE_luci-mod-admin-mini=y
 # CONFIG_PACKAGE_luci-mod-battstatus is not set
 # CONFIG_PACKAGE_luci-mod-dashboard is not set
 CONFIG_PACKAGE_luci-mod-network=y
@@ -4436,6 +4439,7 @@ CONFIG_PACKAGE_luci-mod-system=y
 # CONFIG_PACKAGE_luci-app-cjdns is not set
 CONFIG_PACKAGE_luci-app-clamav=y
 # CONFIG_PACKAGE_luci-app-commands is not set
+# CONFIG_PACKAGE_luci-app-coovachilli is not set
 # CONFIG_PACKAGE_luci-app-cshark is not set
 # CONFIG_PACKAGE_luci-app-dawn is not set
 # CONFIG_PACKAGE_luci-app-dcwapd is not set
@@ -4458,6 +4462,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-ledtrig-rssi is not set
 # CONFIG_PACKAGE_luci-app-ledtrig-switch is not set
 # CONFIG_PACKAGE_luci-app-ledtrig-usbport is not set
+# CONFIG_PACKAGE_luci-app-ltqtapi is not set
 # CONFIG_PACKAGE_luci-app-lxc is not set
 # CONFIG_PACKAGE_luci-app-minidlna is not set
 # CONFIG_PACKAGE_luci-app-mjpg-streamer is not set
@@ -4571,6 +4576,7 @@ CONFIG_PACKAGE_luci-lib-nixio=y
 # CONFIG_PACKAGE_luci-lib-nixio_cyassl is not set
 CONFIG_PACKAGE_luci-lib-nixio_openssl=y
 # CONFIG_PACKAGE_luci-lib-px5g is not set
+# CONFIG_PACKAGE_luci-lib-rpcc is not set
 # end of 6. Libraries
 
 # CONFIG_PACKAGE_luci-i18n-base-ar is not set
@@ -4746,6 +4752,7 @@ CONFIG_PACKAGE_luci-i18n-opkg-zh-tw=y
 # Mail
 #
 # CONFIG_PACKAGE_alpine is not set
+# CONFIG_PACKAGE_alpine-nossl is not set
 # CONFIG_PACKAGE_bogofilter is not set
 # CONFIG_PACKAGE_dovecot is not set
 # CONFIG_PACKAGE_dovecot-pigeonhole is not set
@@ -4858,6 +4865,7 @@ CONFIG_PACKAGE_luci-i18n-opkg-zh-tw=y
 # CONFIG_PACKAGE_rp-pppoe-common is not set
 # CONFIG_PACKAGE_rp-pppoe-relay is not set
 # CONFIG_PACKAGE_rp-pppoe-server is not set
+# CONFIG_PACKAGE_rp-pppoe-sniff is not set
 # end of Dial-in/up
 
 #
@@ -5489,6 +5497,9 @@ CONFIG_PACKAGE_uhttpd-mod-ucode=y
 # CONFIG_PACKAGE_hcxdumptool is not set
 # CONFIG_PACKAGE_hcxtools is not set
 # CONFIG_PACKAGE_horst is not set
+# CONFIG_PACKAGE_kismet-client is not set
+# CONFIG_PACKAGE_kismet-drone is not set
+# CONFIG_PACKAGE_kismet-server is not set
 # CONFIG_PACKAGE_pixiewps is not set
 # CONFIG_PACKAGE_reaver is not set
 # CONFIG_PACKAGE_wavemon is not set
