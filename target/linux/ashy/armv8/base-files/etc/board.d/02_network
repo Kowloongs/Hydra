@@ -1,4 +1,3 @@
-
 . /lib/functions/uci-defaults.sh
 . /lib/functions/system.sh
 
@@ -25,7 +24,7 @@ generate_mac_from_mmc_cid()
 	echo "$(macaddr_unsetbit_mc "$(macaddr_setbit_la "${mac_base}")")"
 }
 
-nanopi_r4s_get_mac()
+monopi_r5s_get_mac()
 {
 	local interface=$1
 	local eeprom_path="/sys/bus/i2c/devices/2-0051/eeprom"

@@ -13,7 +13,7 @@ endef
 
 ### Image scripts ###
 define Build/boot-common
-	# This creates a new folder copies the dtb (as rockchip.dtb) 
+	# This creates a new folder copies the dtb (as ashy.dtb)
 	# and the kernel image (as kernel.img)
 	rm -fR $@.boot
 	mkdir -p $@.boot
@@ -27,7 +27,7 @@ define Build/boot-script
 	mkimage -A arm -O linux -T script -C none -a 0 -e 0 -d $(if $(1),$(1),mmc).bootscript $@.boot/boot.scr
 endef
 
-define Build/boot-script-bin
+define Build/boot-binary
 	# Hack: this boot scr is pre build from bsp uboot
 	cp "$(STAGING_DIR_IMAGE)"/$(UBOOT_DEVICE_NAME)-boot.scr $@.boot/boot.scr
 endef
@@ -72,7 +72,7 @@ define Build/pine64-bin
 	dd if="$(STAGING_DIR_IMAGE)"/$(SOC)-trust.bin of="$@" seek=24576 conv=notrunc
 endef
 
-define Build/rockchip-gpt-img
+define Build/ashy-gpt-img
 	PADDING=1 $(SCRIPT_DIR)/gen_image_gpt.sh \
 		$@ \
 		$(CONFIG_TARGET_KERNEL_PARTSIZE) $@.boot \
