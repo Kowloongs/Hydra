@@ -37,6 +37,10 @@ define Build/Configure
 	$(call Build/Configure/Default)
 endef
 
+define Build/Prepare
+	$(TAR) -C $(PKG_BUILD_DIR) -xf $(DL_DIR)/$(PKG_SOURCE)
+endef
+
 define Build/Compile
 	$(CURDIR)/pre-firmware.sh build $(BUILD_VARIANT) $(PKG_BUILD_DIR)
 endef
