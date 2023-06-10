@@ -48,7 +48,7 @@ endef
 define Build/InstallDev
 	$(INSTALL_DIR) -p $(STAGING_DIR_IMAGE)
 	$(CURDIR)/pre-firmware.sh install $(BUILD_VARIANT) $(PKG_BUILD_DIR) $(STAGING_DIR_IMAGE)
-	$(CP) ./files/bin/rk35/* $(STAGING_DIR_IMAGE)
+	cp -rf ./files/bin/rk35/* $(STAGING_DIR_IMAGE)
 endef
 
 define Package/arm-trusted-firmware-ashy/install
