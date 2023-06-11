@@ -31,14 +31,14 @@ define Package/arm-trusted-firmware-ashy
     VARIANT:=rk3568
 endef
 
+define Build/Prepare
+	$(TAR) -C $(PKG_BUILD_DIR) -xf $(DL_DIR)/$(PKG_SOURCE)
+endef
+
 define Build/Configure
 	$(SED) 's,$$$$(PKG_BUILD_DIR),$(PKG_BUILD_DIR),g' $(PKG_BUILD_DIR)/trust.ini
 	$(SED) 's,$$$$(VARIANT),$(BUILD_VARIANT),g' $(PKG_BUILD_DIR)/trust.ini
 	$(call Build/Configure/Default)
-endef
-
-define Build/Prepare
-	$(TAR) -C $(PKG_BUILD_DIR) -xf $(DL_DIR)/$(PKG_SOURCE)
 endef
 
 define Build/Compile

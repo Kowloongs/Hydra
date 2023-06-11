@@ -25,13 +25,14 @@ endef
 
 define U-Boot/monopi-r5s-rk3568
   BUILD_SUBTARGET:=armv8
-  NAME:=Hedge-MonoPi-R5S
+  NAME:=Hedge MonoPi R5S
   BUILD_DEVICES:= \
-    monopi-r5s
+    monopi_monopi-r5s
   DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-ashy
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
   ATF:=rk3568_bl31_v1.42.elf
   DDR:=rk3568_ddr_1560MHz_v1.16.bin
+  OF_PRE_BUILD:=$(1)
 endef
 
 UBOOT_TARGETS := \
@@ -41,10 +42,19 @@ UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
 UBOOT_MAKE_FLAGS += \
   BL31=$(STAGING_DIR_IMAGE)/$(ATF) \
-  RK_TPL_BIN=$(STAGING_DIR_IMAGE)/$(TPL)
+  RK_TPL_BIN=$(STAGING_DIR_IMAGE)/$(TPL) \
 
 define Build/Configure
 	$(call Build/Configure/U-Boot)
+
+ifneq ($(OF_PLATDATA),)
+	mkdir -p $(PKG_BUILD_DIR)/tpl/dts
+	mkdir -p $(PKG_BUILD_DIR)/include/generated
+
+	$(CP) $(PKG_BUILD_DIR)/of-platdata/$(OF_PLATDATA)/dt-plat.c $(PKG_BUILD_DIR)/tpl/dts/dt-plat.c
+	$(CP) $(PKG_BUILD_DIR)/of-platdata/$(OF_PLATDATA)/dt-structs-gen.h $(PKG_BUILD_DIR)/include/generated/dt-structs-gen.h
+	$(CP) $(PKG_BUILD_DIR)/of-platdata/$(OF_PLATDATA)/dt-decl.h $(PKG_BUILD_DIR)/include/generated/dt-decl.h
+endif
 
 	$(SED) 's/CONFIG_TOOLS_LIBCRYPTO=y/# CONFIG_TOOLS_LIBCRYPTO is not set/' $(PKG_BUILD_DIR)/.config
 	$(SED) 's#CONFIG_MKIMAGE_DTC_PATH=.*#CONFIG_MKIMAGE_DTC_PATH="$(PKG_BUILD_DIR)/scripts/dtc/dtc"#g' $(PKG_BUILD_DIR)/.config
@@ -57,6 +67,7 @@ endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(STAGING_DIR_IMAGE)
+	
 ifneq ($(USE_RKBIN),)
 	$(STAGING_DIR_IMAGE)/loaderimage --pack --uboot $(PKG_BUILD_DIR)/u-boot-dtb.bin $(PKG_BUILD_DIR)/uboot.img 0x200000
 	$(CP) $(PKG_BUILD_DIR)/uboot.img $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-uboot.img
