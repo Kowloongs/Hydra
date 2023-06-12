@@ -3,17 +3,17 @@
 #
 
 include $(TOPDIR)/rules.mk
+include $(INCLUDE_DIR)/kernel.mk
 
 PKG_NAME:=arm-trusted-firmware-ashy
 PKG_VERSION:=2.4
 PKG_RELEASE:=$(AUTORELEASE)
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL=https://github.com/rockchip-linux/rkbin.git
 PKG_SOURCE_DATE:=2023-05-19
 PKG_SOURCE_VERSION:=d6ccfe401ca84a98ca3b85c12b9554a1a43a166c
-PKG_MIRROR_HASH:=1b9faa5479eebde5dd189f51c766d4ba5cbbf058cd9b7020ab27144efeea880b
+PKG_MIRROR_HASH:=skip
 
 PKG_LICENSE:=BSD-3-Clause
 PKG_LICENSE_FILES:=license.md
@@ -28,11 +28,11 @@ define Package/arm-trusted-firmware-ashy
     SECTION:=boot
     CATEGORY:=Boot Loaders
     TITLE:=ARM Trusted Firmware for Ashy
-    DEPENDS:=@TARGET_ashy_armv8
+    DEPENDS:=@TARGET_rockchip_armv8
 endef
 
 define Build/Prepare
-	$(TAR) -C $(PKG_BUILD_DIR) -xf $(DL_DIR)/$(PKG_SOURCE)
+	$(TAR) -C $(PKG_BUILD_DIR) -xvf $(DL_DIR)/$(PKG_SOURCE)
 endef
 
 define Build/Compile

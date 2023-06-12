@@ -11,4 +11,3 @@ define Device/ombres_monopi-r5s
   DEVICE_PACKAGES := kmod-usb-net-rtl8152
 endef
 TARGET_DEVICES += ombres_monopi-r5s
-
