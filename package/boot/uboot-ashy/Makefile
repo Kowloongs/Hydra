@@ -32,6 +32,7 @@ define U-Boot/monopi-r5s-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
   ATF:=rk3568_bl31_v1.42.elf
   DDR:=rk3568_ddr_1560MHz_v1.16.bin
+  USE_RKBIN:=$(1)
   OF_PRE_BUILD:=$(1)
 endef
 
