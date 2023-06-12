@@ -3,7 +3,6 @@
 #
 
 include $(TOPDIR)/rules.mk
-include $(INCLUDE_DIR)/kernel.mk
 
 PKG_NAME:=arm-trusted-firmware-ashy
 PKG_VERSION:=2.4
@@ -22,18 +21,29 @@ PKG_MAINTAINER:=Ombres
 
 MAKE_PATH:=$(PKG_NAME)
 
+include $(INCLUDE_DIR)/trusted-firmware-a.mk
 include $(INCLUDE_DIR)/package.mk
 
-define Package/arm-trusted-firmware-ashy
+define Package/arm-trusted-firmware-ashy/Default
     SECTION:=boot
     CATEGORY:=Boot Loaders
     TITLE:=ARM Trusted Firmware for Ashy
     DEPENDS:=@TARGET_rockchip_armv8
 endef
 
-define Build/Prepare
-	$(TAR) -C $(PKG_BUILD_DIR) -xvf $(DL_DIR)/$(PKG_SOURCE)
+define Package/arm-trusted-firmware-ashy-rk3568
+    $(call Package/arm-trusted-firmware-ashy/Default)
+    VARIANT:=rk3568
 endef
+
+export GCC_HONOUR_COPTS=s
+
+MAKE_VARS = \
+	CROSS_COMPILE="$(TARGET_CROSS)"
+
+MAKE_FLAGS += \
+	PLAT=$(BUILD_VARIANT) \
+	bl31
 
 define Build/Compile
 endef
@@ -46,4 +56,4 @@ endef
 define Package/arm-trusted-firmware-ashy/install
 endef
 
-$(eval $(call BuildPackage,arm-trusted-firmware-ashy))
+$(eval $(call BuildPackage,arm-trusted-firmware-ashy-rk3568))
