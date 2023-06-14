@@ -29,10 +29,10 @@ define U-Boot/monopi-r5s-rk3568
   NAME:=Ombres MonoPi R5S
   BUILD_DEVICES:= \
     ombres_monopi-r5s
-  DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-ashy
+  DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
-  ATF:=rk3568_bl31_v1.42.elf
-  DDR:=rk3568_ddr_1560MHz_v1.16.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 UBOOT_TARGETS := \
@@ -41,23 +41,15 @@ UBOOT_TARGETS := \
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
 UBOOT_MAKE_FLAGS += \
-  BL31=$(STAGING_DIR_IMAGE)/$(ATF)
+  BL31=$(STAGING_DIR_IMAGE)/$(ATF) \
+  RK_TPL_BIN=$(STAGING_DIR_IMAGE)/$(TPL) \
 
 define Build/Configure
 	$(call Build/Configure/U-Boot)
 
-ifneq ($(OF_PLATDATA),)
-	mkdir -p $(PKG_BUILD_DIR)/tpl/dts
-	mkdir -p $(PKG_BUILD_DIR)/include/generated
-
-	$(CP) $(PKG_BUILD_DIR)/of-platdata/$(OF_PLATDATA)/dt-plat.c $(PKG_BUILD_DIR)/tpl/dts/dt-plat.c
-	$(CP) $(PKG_BUILD_DIR)/of-platdata/$(OF_PLATDATA)/dt-structs-gen.h $(PKG_BUILD_DIR)/include/generated/dt-structs-gen.h
-	$(CP) $(PKG_BUILD_DIR)/of-platdata/$(OF_PLATDATA)/dt-decl.h $(PKG_BUILD_DIR)/include/generated/dt-decl.h
-endif
-
+	$(SED) 's/CONFIG_TOOLS_LIBCRYPTO=y/# CONFIG_TOOLS_LIBCRYPTO is not set/' $(PKG_BUILD_DIR)/.config
 	$(SED) 's#CONFIG_MKIMAGE_DTC_PATH=.*#CONFIG_MKIMAGE_DTC_PATH="$(PKG_BUILD_DIR)/scripts/dtc/dtc"#g' $(PKG_BUILD_DIR)/.config
-	echo 'CONFIG_IDENT_STRING=" Hydra"' >> $(PKG_BUILD_DIR)/.config
-	
+	echo 'CONFIG_IDENT_STRING=" OpenWrt"' >> $(PKG_BUILD_DIR)/.config
 ifneq ($(DDR),)
 	$(CP) $(STAGING_DIR_IMAGE)/$(DDR) $(PKG_BUILD_DIR)/ram_init.bin
 endif
@@ -65,7 +57,6 @@ endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(STAGING_DIR_IMAGE)
-	
 ifneq ($(USE_RKBIN),)
 	$(STAGING_DIR_IMAGE)/loaderimage --pack --uboot $(PKG_BUILD_DIR)/u-boot-dtb.bin $(PKG_BUILD_DIR)/uboot.img 0x200000
 	$(CP) $(PKG_BUILD_DIR)/uboot.img $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-uboot.img
@@ -85,3 +76,4 @@ define Package/u-boot/install/default
 endef
 
 $(eval $(call BuildPackage/U-Boot))
+
