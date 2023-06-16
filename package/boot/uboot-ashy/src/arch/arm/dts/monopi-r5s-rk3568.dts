@@ -2,134 +2,135 @@
 /*
  * FriendlyElec NanoPC-T4 board device tree source
  *
- * Copyright (c) 2020 FriendlyElec Computer Tech. Co., Ltd.
+ * Copyright (c) 2018 FriendlyElec Computer Tech. Co., Ltd.
  * (http://www.friendlyarm.com)
  *
  * Copyright (c) 2018 Collabora Ltd.
- *
- * Copyright (c) 2020 Jensen Huang <jensenhuang@friendlyarm.com>
- * Copyright (c) 2020 Marty Jones <mj8263788@gmail.com>
- * Copyright (c) 2021 Tianling Shen <cnsztl@gmail.com>
  */
 
 /dts-v1/;
 #include "rk3399-nanopi4.dtsi"
 
 / {
-	model = "FriendlyElec NanoPi R4SE";
-	compatible = "friendlyarm,nanopi-r4se", "rockchip,rk3399";
+	model = "FriendlyElec NanoPC-T4";
+	compatible = "friendlyarm,nanopc-t4", "rockchip,rk3399";
 
-	/delete-node/ display-subsystem;
-
-	gpio-leds {
-		pinctrl-0 = <&lan_led_pin>, <&sys_led_pin>, <&wan_led_pin>;
-
-		/delete-node/ led-0;
-
-		lan_led: led-lan {
-			gpios = <&gpio1 RK_PA1 GPIO_ACTIVE_HIGH>;
-			label = "green:lan";
-		};
-
-		sys_led: led-sys {
-			gpios = <&gpio0 RK_PB5 GPIO_ACTIVE_HIGH>;
-			label = "red:power";
-			default-state = "on";
-		};
-
-		wan_led: led-wan {
-			gpios = <&gpio1 RK_PA0 GPIO_ACTIVE_HIGH>;
-			label = "green:wan";
-		};
-	};
-
-	gpio-keys {
-		pinctrl-0 = <&reset_button_pin>;
-
-		/delete-node/ power;
-
-		reset {
-			debounce-interval = <50>;
-			gpios = <&gpio1 RK_PC6 GPIO_ACTIVE_LOW>;
-			label = "reset";
-			linux,code = <KEY_RESTART>;
-		};
-	};
-
-	vdd_5v: vdd-5v {
+	vcc12v0_sys: vcc12v0-sys {
 		compatible = "regulator-fixed";
-		regulator-name = "vdd_5v";
 		regulator-always-on;
 		regulator-boot-on;
+		regulator-max-microvolt = <12000000>;
+		regulator-min-microvolt = <12000000>;
+		regulator-name = "vcc12v0_sys";
+	};
+
+	vcc5v0_host0: vcc5v0-host0 {
+		compatible = "regulator-fixed";
+		regulator-always-on;
+		regulator-boot-on;
+		regulator-name = "vcc5v0_host0";
+		vin-supply = <&vcc5v0_sys>;
+	};
+
+	adc-keys {
+		compatible = "adc-keys";
+		io-channels = <&saradc 1>;
+		io-channel-names = "buttons";
+		keyup-threshold-microvolt = <1800000>;
+		poll-interval = <100>;
+
+		recovery {
+			label = "Recovery";
+			linux,code = <KEY_VENDOR>;
+			press-threshold-microvolt = <18000>;
+		};
+	};
+
+	ir-receiver {
+		compatible = "gpio-ir-receiver";
+		gpios = <&gpio0 RK_PA6 GPIO_ACTIVE_LOW>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&ir_rx>;
+	};
+
+	fan: pwm-fan {
+		compatible = "pwm-fan";
+		/*
+		 * With 20KHz PWM and an EVERCOOL EC4007H12SA fan, these levels
+		 * work out to 0, ~1200, ~3000, and 5000RPM respectively.
+		 */
+		cooling-levels = <0 12 18 255>;
+		#cooling-cells = <2>;
+		fan-supply = <&vcc12v0_sys>;
+		pwms = <&pwm1 0 50000 0>;
 	};
 };
 
-&i2c4 {
-	status = "disabled";
+&cpu_thermal {
+	trips {
+		cpu_warm: cpu_warm {
+			temperature = <55000>;
+			hysteresis = <2000>;
+			type = "active";
+		};
+
+		cpu_hot: cpu_hot {
+			temperature = <65000>;
+			hysteresis = <2000>;
+			type = "active";
+		};
+	};
+
+	cooling-maps {
+		map2 {
+			trip = <&cpu_warm>;
+			cooling-device = <&fan THERMAL_NO_LIMIT 1>;
+		};
+
+		map3 {
+			trip = <&cpu_hot>;
+			cooling-device = <&fan 2 THERMAL_NO_LIMIT>;
+		};
+	};
 };
 
 &pcie0 {
-	max-link-speed = <1>;
-	num-lanes = <1>;
+	num-lanes = <4>;
 	vpcie3v3-supply = <&vcc3v3_sys>;
 };
 
 &pinctrl {
-	gpio-leds {
-		/delete-node/ status-led-pin;
-
-		lan_led_pin: lan-led-pin {
-			rockchip,pins = <1 RK_PA1 RK_FUNC_GPIO &pcfg_pull_none>;
-		};
-
-		sys_led_pin: sys-led-pin {
-			rockchip,pins = <0 RK_PB5 RK_FUNC_GPIO &pcfg_pull_none>;
-		};
-
-		wan_led_pin: wan-led-pin {
-			rockchip,pins = <1 RK_PA0 RK_FUNC_GPIO &pcfg_pull_none>;
+	ir {
+		ir_rx: ir-rx {
+			/* external pullup to VCC3V3_SYS, despite being 1.8V :/ */
+			rockchip,pins = <0 RK_PA6 1 &pcfg_pull_none>;
 		};
 	};
-
-	rockchip-key {
-		/delete-node/ power-key;
-
-		reset_button_pin: reset-button-pin {
-			rockchip,pins = <1 RK_PC6 RK_FUNC_GPIO &pcfg_pull_up>;
-		};
-	};
-};
-
-&emmc_phy {
- status = "okay";
 };
 
 &sdhci {
- bus-width = <8>;
- non-removable;
- status = "okay";
-};
-
-&sdio0 {
-	status = "disabled";
+	mmc-hs400-1_8v;
+	mmc-hs400-enhanced-strobe;
 };
 
 &u2phy0_host {
-	phy-supply = <&vdd_5v>;
+	phy-supply = <&vcc5v0_host0>;
 };
 
 &u2phy1_host {
-	status = "disabled";
+	phy-supply = <&vcc5v0_host0>;
 };
 
-&uart0 {
-	status = "disabled";
-};
-
-&usbdrd_dwc3_0 {
-	dr_mode = "host";
+&vcc5v0_sys {
+	vin-supply = <&vcc12v0_sys>;
 };
 
 &vcc3v3_sys {
+	vin-supply = <&vcc12v0_sys>;
+};
+
+&vbus_typec {
+	enable-active-high;
+	gpios = <&gpio4 RK_PD2 GPIO_ACTIVE_HIGH>;
 	vin-supply = <&vcc5v0_sys>;
 };
