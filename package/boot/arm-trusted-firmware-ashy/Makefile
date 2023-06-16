@@ -19,22 +19,12 @@ MAKE_PATH:=$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/arm-trusted-firmware-ashy
+define Package/arm-trusted-firmware-ashy/Default
     SECTION:=boot
     CATEGORY:=Boot Loaders
     TITLE:=ARM Trusted Firmware for Ashy
-endef
-
-define Package/arm-trusted-firmware-rk3568
-    $(Package/arm-trusted-firmware-ashy)
-    DEPENDS:=@TARGET_rockchip_armv8
+    DEPENDS:=@TARGET_ashy_armv8
     VARIANT:=rk3568
-endef
-
-define Package/arm-trusted-firmware-rk3588
-    $(Package/arm-trusted-firmware-ashy)
-    DEPENDS:=@TARGET_rockchip_armv8
-    VARIANT:=rk3588
 endef
 
 define Build/Configure
@@ -54,13 +44,7 @@ define Build/InstallDev
 endef
 
 
-define Package/arm-trusted-firmware-rk3568/install
+define Package/arm-trusted-firmware-ashy/install
 endef
 
-define Package/arm-trusted-firmware-rk3588/install
-endef
-
-$(eval $(call BuildPackage,arm-trusted-firmware-rk3328))
-$(eval $(call BuildPackage,arm-trusted-firmware-rk3399))
-$(eval $(call BuildPackage,arm-trusted-firmware-rk3568))
-$(eval $(call BuildPackage,arm-trusted-firmware-rk3588))
+$(eval $(call BuildPackage,arm-trusted-firmware-ashy))

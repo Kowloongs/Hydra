@@ -29,7 +29,7 @@ define U-Boot/monopi-r5s-rk3568
   NAME:=Ombres MonoPi R5S
   BUILD_DEVICES:= \
     ombres_monopi-r5s
-  DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-rk3568
+  DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-ashy
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
   ATF:=rk3568_bl31_v1.28.elf
   DDR:=rk3568_ddr_1560MHz_v1.13.bin
