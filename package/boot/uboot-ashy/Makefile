@@ -16,7 +16,7 @@ include $(INCLUDE_DIR)/u-boot.mk
 include $(INCLUDE_DIR)/package.mk
 
 define U-Boot/Default
-  BUILD_TARGET:=rockchip
+  BUILD_TARGET:=ashy
   UENV:=default
   HIDDEN:=1
 endef

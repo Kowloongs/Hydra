@@ -4,7 +4,7 @@
 
 define Device/ombres_monopi-r5s
   DEVICE_VENDOR := Ombres
-  DEVICE_MODEL := MonoPi R5S
+  DEVICE_MODEL := Ombres MonoPi R5S
   SOC := rk3568
   UBOOT_DEVICE_NAME := monopi-r5s-rk3568
   IMAGE/sysupgrade.img.gz := boot-common | boot-script monopi-r5s | pine64-img | gzip

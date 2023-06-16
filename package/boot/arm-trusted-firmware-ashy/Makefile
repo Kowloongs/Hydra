@@ -19,7 +19,7 @@ MAKE_PATH:=$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/arm-trusted-firmware-ashy/Default
+define Package/arm-trusted-firmware-ashy
     SECTION:=boot
     CATEGORY:=Boot Loaders
     TITLE:=ARM Trusted Firmware for Ashy

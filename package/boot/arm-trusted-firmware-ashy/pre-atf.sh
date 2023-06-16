@@ -1,5 +1,6 @@
-#!/bin/bash
-# Copyright (C) 2021 ImmortalWrt.org
+#
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 ACTION="$1"
 VARIANT="$2"
