@@ -8,6 +8,7 @@ PKG_NAME:=arm-trusted-firmware-ashy
 PKG_VERSION:=2.4
 PKG_RELEASE:=$(AUTORELEASE)
 
+PKG_SOURCE=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL=https://github.com/rockchip-linux/rkbin.git
 PKG_SOURCE_DATE:=2023-05-19
@@ -25,25 +26,19 @@ define Package/arm-trusted-firmware-ashy
     CATEGORY:=Boot Loaders
     TITLE:=ARM Trusted Firmware for Ashy
     DEPENDS:=@TARGET_ashy_armv8
-    VARIANT:=rk3568
 endef
 
-define Build/Configure
-	$(SED) 's,$$$$(PKG_BUILD_DIR),$(PKG_BUILD_DIR),g' $(PKG_BUILD_DIR)/trust.ini
-	$(SED) 's,$$$$(VARIANT),$(BUILD_VARIANT),g' $(PKG_BUILD_DIR)/trust.ini
-	$(call Build/Configure/Default)
+define Build/Prepare
+	$(TAR) -C $(PKG_BUILD_DIR) -xf $(DL_DIR)/$(PKG_SOURCE)
 endef
 
 define Build/Compile
-	$(CURDIR)/pre-atf.sh build $(BUILD_VARIANT) $(PKG_BUILD_DIR)
 endef
 
 define Build/InstallDev
-	$(INSTALL_DIR) $(STAGING_DIR_IMAGE)
-	$(CURDIR)/pre-atf.sh install $(BUILD_VARIANT) $(PKG_BUILD_DIR) $(STAGING_DIR_IMAGE)
-	$(CP) ./files/bin/rk35/* $(STAGING_DIR_IMAGE)
+	$(INSTALL_DIR) -p $(STAGING_DIR_IMAGE)
+	$(CP) $(PKG_BUILD_DIR)/$(PKG_SOURCE)/bin/rk35/* $(STAGING_DIR_IMAGE)/
 endef
-
 
 define Package/arm-trusted-firmware-ashy/install
 endef
