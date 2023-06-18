@@ -8,7 +8,6 @@ PKG_NAME:=arm-trusted-firmware-ashy
 PKG_VERSION:=2.4
 PKG_RELEASE:=$(AUTORELEASE)
 
-PKG_SOURCE=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL=https://github.com/rockchip-linux/rkbin.git
 PKG_SOURCE_DATE:=2023-05-19
@@ -37,7 +36,7 @@ endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) -p $(STAGING_DIR_IMAGE)
-	$(CP) $(PKG_BUILD_DIR)/$(PKG_SOURCE)/bin/rk35/* $(STAGING_DIR_IMAGE)/
+	$(CP) $(PKG_BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/bin/rk35/* $(STAGING_DIR_IMAGE)/
 endef
 
 define Package/arm-trusted-firmware-ashy/install
