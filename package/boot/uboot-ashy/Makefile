@@ -21,8 +21,7 @@ define U-Boot/Default
   HIDDEN:=1
 endef
 
-
-# Hydragon Boards
+# Hexonisg Boards
 
 define U-Boot/monopi-r5s-rk3568
   BUILD_SUBTARGET:=armv8
@@ -55,7 +54,7 @@ endif
 endef
 
 define Build/InstallDev
-	$(INSTALL_DIR) $(STAGING_DIR_IMAGE)
+	$(INSTALL_DIR) -p $(STAGING_DIR_IMAGE)
 	
 ifneq ($(USE_RKBIN),)
 	$(STAGING_DIR_IMAGE)/loaderimage --pack --uboot $(PKG_BUILD_DIR)/u-boot-dtb.bin $(PKG_BUILD_DIR)/uboot.img 0x200000
@@ -66,9 +65,9 @@ else
 endif
 
 ifneq ($(OF_PRE_BUILD),)
+	$(CP) $(PKG_BUILD_DIR)/of-pre-build/$(OF_PRE_BUILD)/boot.scr $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-boot.scr
 	$(CP) $(PKG_BUILD_DIR)/of-pre-build/$(OF_PRE_BUILD)/idbloader.img $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-idbloader.img
 	$(CP) $(PKG_BUILD_DIR)/of-pre-build/$(OF_PRE_BUILD)/uboot.img $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-u-boot.itb
-	$(CP) $(PKG_BUILD_DIR)/of-pre-build/$(OF_PRE_BUILD)/boot.scr $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-boot.scr
 endif
 endef
 
@@ -76,4 +75,3 @@ define Package/u-boot/install/default
 endef
 
 $(eval $(call BuildPackage/U-Boot))
-
