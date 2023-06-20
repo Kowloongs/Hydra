@@ -27,7 +27,7 @@ define U-Boot/monopi-r5s-rk3568
   BUILD_SUBTARGET:=armv8
   NAME:=Ombres MonoPi R5S
   BUILD_DEVICES:= \
-    ombres_monopi-r5s
+    monopi-r5s-rk3568
   DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-ashy
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
   ATF:=rk3568_bl31_v1.42.elf
