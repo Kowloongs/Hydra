@@ -418,9 +418,9 @@ index 5d40fb1a..624c99a3 100644
 --- a/board/ombres/monopi-r5s-rk3568/monopi-r5s-rk3568.c
 +++ b/board/Ombres/monopi-r5s_rk3568/monopi-r5s_rk3568.c
 @@ -1,5 +1,3 @@
- #
- # Copyright (C) 2015 - 2029. Hydra Project.
- #
+ //
+ // Copyright (C) 2015 - 2029. Hydra Project.
+ //
 -
 -
 diff --git a/configs/monopi-r5s-rk3568_defconfig b/configs/monopi-r5s-rk3568_defconfig
