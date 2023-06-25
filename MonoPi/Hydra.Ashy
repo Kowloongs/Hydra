@@ -57,12 +57,17 @@ CONFIG_TARGET_ARCH_PACKAGES="aarch64_generic"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mcpu=generic"
 CONFIG_CPU_TYPE="generic"
 CONFIG_LINUX_5_10=y
+CONFIG_DEFAULT_autocore-arm=y
+CONFIG_DEFAULT_automount=y
 CONFIG_DEFAULT_base-files=y
 CONFIG_DEFAULT_busybox=y
 CONFIG_DEFAULT_ca-bundle=y
+CONFIG_DEFAULT_cfdisk=y
 CONFIG_DEFAULT_dnsmasq=y
 CONFIG_DEFAULT_dropbear=y
 CONFIG_DEFAULT_e2fsprogs=y
+CONFIG_DEFAULT_ethtool=y
+CONFIG_DEFAULT_fdisk=y
 CONFIG_DEFAULT_firewall4=y
 CONFIG_DEFAULT_fstools=y
 CONFIG_DEFAULT_kmod-gpio-button-hotplug=y
@@ -1708,7 +1713,8 @@ CONFIG_ZABBIX_POSTGRESQL=y
 #
 # Boot Loaders
 #
-# CONFIG_PACKAGE_arm-trusted-firmware-ashy is not set
+CONFIG_PACKAGE_arm-trusted-firmware-ashy=y
+CONFIG_PACKAGE_u-boot-monopi-r5s-rk3568=y
 # end of Boot Loaders
 
 #
