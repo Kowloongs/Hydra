@@ -21,27 +21,19 @@ define Package/Hexonwall
   SECTION:=net
   CATEGORY:=Base system
   TITLE:=The Sixth Generation Firewall
-  DEPENDS:= \
-	+kmod-nft-core +kmod-nft-fib +kmod-nft-offload \
-	+kmod-nft-nat \
-	+nftables-json \
-	+ucode +ucode-mod-fs +ucode-mod-ubus +ucode-mod-uci
-  EXTRA_DEPENDS:=ucode (>= 2022-03-22)
-  PROVIDES:=uci-firewall
+  DEPENDS:=
+  EXTRA_DEPENDS:=
+  PROVIDES:=
 endef
 
 define Package/Hexonwall/description
- This package provides an nftables-based implementation of the UCI firewall
- sharing the same configuration format.
+ The Sixth Generation Firewall.
 endef
 
 define Package/Hexonwall/conffiles
-/etc/config/firewall
-/etc/nftables.d/
 endef
 
 define Package/Hexonwall/install
-	$(CP) -a $(PKG_BUILD_DIR)/root/* $(1)/
 endef
 
 define Build/Compile
