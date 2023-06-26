@@ -169,7 +169,7 @@ define Build/Compile
 		CFLAGS="" \
 		CPPFLAGS="" \
 		LDFLAGS="" \
-		V=$(if $(findstring c,$(OPENWRT_VERBOSE)),1,) \
+		V=$(if $(findstring c,$(HYDRA_VERBOSE)),1,) \
 		subst
 	+$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
 		LDFLAGS=-Wl,--gc-sections \
@@ -177,7 +177,7 @@ define Build/Compile
 		DESTDIR="$(PKG_INSTALL_DIR)" \
 		ELF_OTHER_LIBS="$(TARGET_LDFLAGS) -luuid" \
 		SYSLIBS="$(TARGET_LDFLAGS) -ldl -L$(PKG_BUILD_DIR)/lib/ -l:libcom_err.so.0.0" \
-		V=$(if $(findstring c,$(OPENWRT_VERBOSE)),1,) \
+		V=$(if $(findstring c,$(HYDRA_VERBOSE)),1,) \
 		all
 endef
 

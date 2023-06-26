@@ -10,7 +10,7 @@ ifeq ($(HOST_USE_NINJA),1)
 endif
 PKG_INSTALL:=1
 
-ifneq ($(findstring c,$(OPENWRT_VERBOSE)),)
+ifneq ($(findstring c,$(HYDRA_VERBOSE)),)
   MAKE_FLAGS+=VERBOSE=1
   HOST_MAKE_FLAGS+=VERBOSE=1
 endif

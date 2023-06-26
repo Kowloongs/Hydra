@@ -98,7 +98,7 @@ MAKE_VARS = \
 MAKE_FLAGS += \
 	OUTPUT="$(PKG_BUILD_DIR)/" \
 	prefix="/usr" \
-	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='') \
+	$(if $(findstring c,$(HYDRA_VERBOSE)),V=1,V='') \
 	LIBSUBDIR=lib \
 	check_feat=0 \
 	feature-clang-bpf-co-re=0 \

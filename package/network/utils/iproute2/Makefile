@@ -191,7 +191,7 @@ MAKE_FLAGS += \
 	TC_CONFIG_XT_OLD_H=$(TC_CONFIG_XT_OLD_H) \
 	TC_CONFIG_IPSET=$(TC_CONFIG_IPSET) \
 	FPIC="$(FPIC)" \
-	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='')
+	$(if $(findstring c,$(HYDRA_VERBOSE)),V=1,V='')
 
 define Build/Compile
 	+$(MAKE_VARS) $(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) $(MAKE_FLAGS)

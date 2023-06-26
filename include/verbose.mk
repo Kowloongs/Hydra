@@ -2,22 +2,22 @@
 # Copyright (C) 2015 - 2029. Hydra Project.
 #
 
-ifndef OPENWRT_VERBOSE
-  OPENWRT_VERBOSE:=
+ifndef HYDRA_VERBOSE
+  HYDRA_VERBOSE:=
 endif
 ifeq ("$(origin V)", "command line")
-  OPENWRT_VERBOSE:=$(V)
+  HYDRA_VERBOSE:=$(V)
 endif
 
-ifeq ($(OPENWRT_VERBOSE),1)
-  OPENWRT_VERBOSE:=w
+ifeq ($(HYDRA_VERBOSE),1)
+  HYDRA_VERBOSE:=w
 endif
-ifeq ($(OPENWRT_VERBOSE),99)
-  OPENWRT_VERBOSE:=s
+ifeq ($(HYDRA_VERBOSE),99)
+  HYDRA_VERBOSE:=s
 endif
 
 ifeq ($(NO_TRACE_MAKE),)
-NO_TRACE_MAKE := $(MAKE) V=s$(OPENWRT_VERBOSE)
+NO_TRACE_MAKE := $(MAKE) V=s$(HYDRA_VERBOSE)
 export NO_TRACE_MAKE
 endif
 
@@ -33,7 +33,7 @@ define ERROR_MESSAGE
   printf "$(_R)%s$(_N)\n" "$(1)" >&8
 endef
 
-ifeq ($(findstring s,$(OPENWRT_VERBOSE)),)
+ifeq ($(findstring s,$(HYDRA_VERBOSE)),)
   define MESSAGE
 	printf "$(_Y)%s$(_N)\n" "$(1)" >&8
   endef
@@ -49,7 +49,7 @@ ifeq ($(findstring s,$(OPENWRT_VERBOSE)),)
     ))
     SUBMAKE=$(MAKE)
   else
-    SILENT:=>/dev/null $(if $(findstring w,$(OPENWRT_VERBOSE)),,2>&1)
+    SILENT:=>/dev/null $(if $(findstring w,$(HYDRA_VERBOSE)),,2>&1)
     export QUIET:=1
     SUBMAKE=cmd() { $(SILENT) $(MAKE) -s "$$@" < /dev/null || { echo "make $$*: build failed. Please re-run make with -j1 V=s or V=sc for a higher verbosity level to see what's going on"; false; } } 8>&1 9>&2; cmd
   endif

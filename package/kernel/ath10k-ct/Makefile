@@ -106,7 +106,7 @@ define Build/Configure
 	cp $(STAGING_DIR)/usr/include/mac80211/ath/*.h $(PKG_BUILD_DIR)
 endef
 
-ifneq ($(findstring c,$(OPENWRT_VERBOSE)),)
+ifneq ($(findstring c,$(HYDRA_VERBOSE)),)
   CT_MAKEDEFS += V=1
 endif
 

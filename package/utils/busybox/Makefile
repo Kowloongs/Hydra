@@ -113,7 +113,7 @@ MAKE_FLAGS += \
 	LDLIBS="$(LDLIBS)" \
 	LD="$(TARGET_CC)" \
 	SKIP_STRIP=y
-ifneq ($(findstring c,$(OPENWRT_VERBOSE)),)
+ifneq ($(findstring c,$(HYDRA_VERBOSE)),)
   MAKE_FLAGS += V=1
 endif
 

@@ -7,7 +7,7 @@ TOPDIR:=${CURDIR}
 LC_ALL:=C
 LANG:=C
 export TOPDIR LC_ALL LANG
-export OPENWRT_VERBOSE=s
+export HYDRA_VERBOSE=s
 all: help
 
 export PATH:=$(TOPDIR)/staging_dir/host/bin:$(PATH)

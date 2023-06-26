@@ -11,7 +11,7 @@ PKG_HASH:=ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed
 include $(INCLUDE_DIR)/host-build.mk
 
 CONFIGURE_ARGS:=
-ifneq ($(findstring c,$(OPENWRT_VERBOSE)),)
+ifneq ($(findstring c,$(HYDRA_VERBOSE)),)
   CONFIGURE_ARGS+=--verbose
 endif
 

@@ -43,7 +43,7 @@ define Host/Uninstall/Default
 	+$(NINJA) -C $(HOST_BUILD_DIR) uninstall
 endef
 
-ifneq ($(findstring c,$(OPENWRT_VERBOSE)),)
+ifneq ($(findstring c,$(HYDRA_VERBOSE)),)
   HOST_MAKE_FLAGS += VERBOSE=1
 endif
 

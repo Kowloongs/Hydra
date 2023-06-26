@@ -41,7 +41,7 @@ MAKE_FLAGS = \
 	LD="$(TARGET_CROSS)ld" \
 	CFLAGS="$(TARGET_CFLAGS) $(TARGET_CPPFLAGS)" \
 	LDFLAGS="$(TARGET_LDFLAGS)" \
-	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='') \
+	$(if $(findstring c,$(HYDRA_VERBOSE)),V=1,V='') \
 	WERROR=0 \
 	prefix=/usr
 

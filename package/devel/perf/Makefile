@@ -62,7 +62,7 @@ MAKE_FLAGS = \
 	EXTRA_CFLAGS="$(TARGET_CFLAGS) $(TARGET_CPPFLAGS)" \
 	LDFLAGS="$(TARGET_LDFLAGS)" \
 	KBUILD_HOSTCFLAGS="$(HOST_CFLAGS)" \
-	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='') \
+	$(if $(findstring c,$(HYDRA_VERBOSE)),V=1,V='') \
 	WERROR=0 \
 	O=$(PKG_BUILD_DIR) \
 	prefix=/usr

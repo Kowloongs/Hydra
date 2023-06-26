@@ -820,7 +820,7 @@ sub update {
 	my $failed=0;
 
 	$ENV{SCAN_COOKIE} = $$;
-	$ENV{OPENWRT_VERBOSE} = 's';
+	$ENV{HYDRA_VERBOSE} = 's';
 
 	getopts('ahif', \%opts);
 	%argv_feeds = map { $_ => 1 } @ARGV;

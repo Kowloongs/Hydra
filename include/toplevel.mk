@@ -102,7 +102,7 @@ scripts/config/%onf: export PATH:=$(dir $(DISTRO_PKG_CONFIG)):$(PATH)
 endif
 scripts/config/%onf: CFLAGS+= -O2
 scripts/config/%onf: FORCE
-	@$(_SINGLE)$(SUBMAKE) $(if $(findstring s,$(OPENWRT_VERBOSE)),,-s) \
+	@$(_SINGLE)$(SUBMAKE) $(if $(findstring s,$(HYDRA_VERBOSE)),,-s) \
 		-C scripts/config $(notdir $@)
 
 $(eval $(call rdep,scripts/config,scripts/config/mconf))
@@ -213,7 +213,7 @@ check: .config FORCE
 val.%: FORCE
 	@+$(NO_TRACE_MAKE) -r -s $@ QUIET= V=s
 
-WARN_PARALLEL_ERROR = $(if $(BUILD_LOG),,$(and $(filter -j,$(MAKEFLAGS)),$(findstring s,$(OPENWRT_VERBOSE))))
+WARN_PARALLEL_ERROR = $(if $(BUILD_LOG),,$(and $(filter -j,$(MAKEFLAGS)),$(findstring s,$(HYDRA_VERBOSE))))
 
 ifeq ($(SDK),1)
 

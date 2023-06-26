@@ -23,7 +23,7 @@ define Host/Compile
 		HOSTCFLAGS="$(HOST_CFLAGS)" \
 		HOSTLDFLAGS="$(HOST_LDFLAGS)" \
 		PKG_CONFIG_EXTRAARGS="--static" \
-		V=$(if $(findstring c,$(OPENWRT_VERBOSE)),1) \
+		V=$(if $(findstring c,$(HYDRA_VERBOSE)),1) \
 		NO_SDL=1 \
 		tools-only_config \
 		tools-only

@@ -113,7 +113,7 @@ KERNEL_MAKE_FLAGS = \
 	HOST_LOADLIBES="-L$(STAGING_DIR_HOST)/lib" \
 	KBUILD_HOSTLDLIBS="-L$(STAGING_DIR_HOST)/lib" \
 	CONFIG_SHELL="$(BASH)" \
-	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='') \
+	$(if $(findstring c,$(HYDRA_VERBOSE)),V=1,V='') \
 	$(if $(PKG_BUILD_ID),LDFLAGS_MODULE=--build-id=0x$(PKG_BUILD_ID)) \
 	cmd_syscalls= \
 	$(if $(__package_mk),KBUILD_EXTRA_SYMBOLS="$(wildcard $(PKG_SYMVERS_DIR)/*.symvers)")

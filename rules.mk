@@ -335,7 +335,7 @@ endif
 NINJA = \
 	MAKEFLAGS="$(MAKE_JOBSERVER)" \
 	$(STAGING_DIR_HOST)/bin/ninja \
-		$(if $(findstring c,$(OPENWRT_VERBOSE)),-v) \
+		$(if $(findstring c,$(HYDRA_VERBOSE)),-v) \
 		$(if $(MAKE_JOBSERVER),,-j1)
 
 ifeq ($(CONFIG_IPV6),y)

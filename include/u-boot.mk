@@ -50,7 +50,7 @@ UBOOT_MAKE_FLAGS = \
 	PKG_CONFIG_PATH="$(STAGING_DIR_HOST)/lib/pkgconfig" \
 	PKG_CONFIG_LIBDIR="$(STAGING_DIR_HOST)/lib/pkgconfig" \
 	PKG_CONFIG_EXTRAARGS="--static" \
-	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='')
+	$(if $(findstring c,$(HYDRA_VERBOSE)),V=1,V='')
 
 define Build/U-Boot/Target
   $(eval $(call U-Boot/Init,$(1)))

@@ -527,7 +527,7 @@ define Build/RunMake
 		LIBS_c="$(TARGET_LDFLAGS_C)" \
 		AR="$(TARGET_CROSS)gcc-ar" \
 		BCHECK= \
-		$(if $(findstring s,$(OPENWRT_VERBOSE)),V=1) \
+		$(if $(findstring s,$(HYDRA_VERBOSE)),V=1) \
 		$(2)
 endef
 
