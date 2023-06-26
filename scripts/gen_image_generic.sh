@@ -33,6 +33,7 @@ ROOTFSSIZE="$(($4 / 512))"
 # entries, hence they end up in the FAT filesystem in traversal order which
 # breaks reproducibility.
 # Implement recursive copy with reproducible order.
+
 dos_dircopy() {
   local entry
   local baseentry
