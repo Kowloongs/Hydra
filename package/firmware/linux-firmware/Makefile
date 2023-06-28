@@ -1,21 +1,18 @@
 #
-# Copyright (C) 2014 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=linux-firmware
-PKG_VERSION:=20220411
+PKG_VERSION:=20230625
 PKG_RELEASE:=1
 
 PKG_SOURCE_URL:=@KERNEL/linux/kernel/firmware
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
-PKG_HASH:=020b11f6412f4956f5a6f98de7d41867d2b30ea0ce81b1e2d206ec9840363849
+PKG_HASH:=87597111c0d4b71b31e53cb85a92c386921b84c825a402db8c82e0e86015500d
 
-PKG_MAINTAINER:=Felix Fietkau <nbd@nbd.name>
+PKG_MAINTAINER:=Ombres
 
 SCAN_DEPS = *.mk
 
@@ -30,7 +27,6 @@ define Package/firmware-default
 endef
 
 define Build/Compile
-
 endef
 
 include $(wildcard ./*.mk)
