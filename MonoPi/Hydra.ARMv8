@@ -456,7 +456,7 @@ CONFIG_TARGET_INIT_CMD="/sbin/init"
 CONFIG_TARGET_INIT_SUPPRESS_STDERR=y
 CONFIG_VERSIONOPT=y
 CONFIG_VERSION_DIST="Hydra"
-CONFIG_VERSION_NUMBER="1.0.9"
+CONFIG_VERSION_NUMBER="1.0.11"
 CONFIG_VERSION_CODE="Versify"
 CONFIG_VERSION_REPO="https://downloads.openwrt.org/releases/22.03-SNAPSHOT"
 CONFIG_VERSION_HOME_URL="https://github.com/Kowloongs/Hydra"
@@ -477,6 +477,7 @@ CONFIG_FEED_telephony=y
 #
 # Base system
 #
+CONFIG_PACKAGE_Hexonwall=y
 CONFIG_PACKAGE_attendedsysupgrade-common=y
 # CONFIG_PACKAGE_auc is not set
 CONFIG_PACKAGE_base-files=y
