@@ -54,6 +54,10 @@ ifneq ($(DDR),)
 endif
 endef
 
+define Build/Compile
+	$(call Build/Compile/U-Boot)
+endef
+
 define Build/InstallDev
 	$(INSTALL_DIR) -p $(STAGING_DIR_IMAGE)
 	
