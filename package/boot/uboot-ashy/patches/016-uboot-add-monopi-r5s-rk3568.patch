@@ -39,7 +39,7 @@
 +	compatible = "monopi,r5s", "rockchip,rk3568";
 +};
 --- /dev/null
-+++ b/board/monopi/monopi-r5s-rk3568/Kconfig
++++ b/board/ombres/monopi-r5s-rk3568/Kconfig
 @@ -0,0 +1,15 @@
 +if TARGET_MONOPI_R5S_RK3568
 +
@@ -47,7 +47,7 @@
 +	default "monopi-r5s-rk3568"
 +
 +config SYS_VENDOR
-+	default "monopi"
++	default "ombres"
 +
 +config SYS_CONFIG_NAME
 +	default "monopi-r5s-rk3568"
