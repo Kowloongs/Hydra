@@ -1,15 +1,18 @@
-From 9b92a43a4f5acf4cba14fd9d473b3120688532dc Mon Sep 17 00:00:00 2001
+From 4af9e42ebb304a9b56936d61d9a026a43e522740 Mon Sep 17 00:00:00 2001
 From: Peter Geis <pgwipeout@gmail.com>
 Date: Sun, 19 Dec 2021 08:10:24 -0500
-Subject: [PATCH 01/11] rockchip: rk3568: add boot device detection
+Subject: [PATCH 01/20] rockchip: rk3568: add boot device detection
 
 Enable spl to detect which device it was booted from.
 
 Signed-off-by: Peter Geis <pgwipeout@gmail.com>
+Signed-off-by: Carlyon W. Tung <loongs@syuusui.com>
 ---
  arch/arm/mach-rockchip/rk3568/rk3568.c | 8 ++++++++
  1 file changed, 8 insertions(+)
 
+diff --git a/arch/arm/mach-rockchip/rk3568/rk3568.c b/arch/arm/mach-rockchip/rk3568/rk3568.c
+index 22eeb77d..9c707da2 100644
 --- a/arch/arm/mach-rockchip/rk3568/rk3568.c
 +++ b/arch/arm/mach-rockchip/rk3568/rk3568.c
 @@ -7,6 +7,7 @@
@@ -41,3 +44,6 @@ Signed-off-by: Peter Geis <pgwipeout@gmail.com>
  static struct mm_region rk3568_mem_map[] = {
  	{
  		.virt = 0x0UL,
+-- 
+2.37.3.windows.1
+

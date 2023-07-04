@@ -1,0 +1,28 @@
+From 1a4dc3bd5327c24fbe0d7f3406fe6a14a5ba39f7 Mon Sep 17 00:00:00 2001
+From: Peter Geis <pgwipeout@gmail.com>
+Date: Mon, 20 Dec 2021 08:50:48 -0500
+Subject: [PATCH 09/20] rockchip: allow sdmmc at full speed
+
+Adding pinctrl and gpio support fixed quartz64-a sdmmc.
+
+Signed-off-by: Peter Geis <pgwipeout@gmail.com>
+Signed-off-by: Carlyon W. Tung <loongs@syuusui.com>
+---
+ arch/arm/dts/rk3566-quartz64-a-u-boot.dtsi | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/arch/arm/dts/rk3566-quartz64-a-u-boot.dtsi b/arch/arm/dts/rk3566-quartz64-a-u-boot.dtsi
+index b8e56bbb..5f5afa88 100644
+--- a/arch/arm/dts/rk3566-quartz64-a-u-boot.dtsi
++++ b/arch/arm/dts/rk3566-quartz64-a-u-boot.dtsi
+@@ -13,7 +13,6 @@
+ };
+ 
+ &sdmmc0 {
+-	max-frequency = <400000>;
+ 	bus-width = <4>;
+ 	u-boot,dm-spl;
+ 	u-boot,spl-fifo-mode;
+-- 
+2.37.3.windows.1
+

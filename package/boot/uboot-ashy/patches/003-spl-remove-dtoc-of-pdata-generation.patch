@@ -1,0 +1,34 @@
+From 7f122fe1a54a0af61e6d0c21bce0d058761f6de9 Mon Sep 17 00:00:00 2001
+From: David Bauer <mail@david-bauer.net>
+Date: Tue, 14 Jul 2020 22:44:22 +0200
+Subject: [PATCH 03/20] spl: remove dtoc of-pdata generation
+
+Remove the dtoc of-pdata generation. This generation is dependant on
+libpython-dev. As OpenWrt does not ship with this dependency, use
+pre-generated pdata files and remove the generation from the
+build-process.
+
+This only affects RK3328 boards.
+
+Signed-off-by: David Bauer <mail@david-bauer.net>
+Signed-off-by: Carlyon W. Tung <loongs@syuusui.com>
+---
+ scripts/Makefile.spl | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/scripts/Makefile.spl b/scripts/Makefile.spl
+index f047d4e0..4f9f49b6 100644
+--- a/scripts/Makefile.spl
++++ b/scripts/Makefile.spl
+@@ -364,8 +364,6 @@ $(platdata-hdr) $(u-boot-spl-platdata_c) &: $(obj)/$(SPL_BIN).dtb
+ 	@# of OF_PLATDATA_INST and this might change between builds. Leaving old
+ 	@# ones around is confusing and it is possible that switching the
+ 	@# setting again will use the old one instead of regenerating it.
+-	@rm -f $(u-boot-spl-all-platdata_c) $(u-boot-spl-all-platdata)
+-	$(call if_changed,dtoc)
+ 
+ ifdef CONFIG_SAMSUNG
+ ifdef CONFIG_VAR_SIZE_SPL
+-- 
+2.37.3.windows.1
+

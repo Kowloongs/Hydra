@@ -1,0 +1,26 @@
+From 5025caba153f81cbd57115c7f83cdce7d70486f7 Mon Sep 17 00:00:00 2001
+From: huangjf <hjf@t-chip.com.cn>
+Date: Sun, 17 Apr 2022 13:58:46 +0800
+Subject: [PATCH 04/20] tools: Makefile: make sure link -lpthread
+
+Signed-off-by: Carlyon W. Tung <loongs@syuusui.com>
+---
+ tools/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tools/Makefile b/tools/Makefile
+index 9f233966..d6dc931a 100644
+--- a/tools/Makefile
++++ b/tools/Makefile
+@@ -176,7 +176,7 @@ ifneq ($(CONFIG_MX23)$(CONFIG_MX28)$(CONFIG_ARMADA_38X)$(CONFIG_TOOLS_LIBCRYPTO)
+ HOSTCFLAGS_kwbimage.o += \
+ 	$(shell pkg-config --cflags libssl libcrypto 2> /dev/null || echo "")
+ HOSTLDLIBS_mkimage += \
+-	$(shell pkg-config --libs libssl libcrypto 2> /dev/null || echo "-lssl -lcrypto")
++	$(shell pkg-config --libs --static libssl libcrypto 2> /dev/null || echo "-lssl -lpthread -lcrypto")
+ 
+ # OS X deprecate openssl in favour of CommonCrypto, supress deprecation
+ # warnings on those systems
+-- 
+2.37.3.windows.1
+
