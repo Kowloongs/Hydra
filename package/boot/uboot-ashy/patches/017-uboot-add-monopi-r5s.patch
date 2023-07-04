@@ -11,7 +11,7 @@ Signed-off-by: Carlyon W. Tung <loongs@syuusui.com>
  arch/arm/mach-rockchip/rk3568/Kconfig         |  6 ++
  board/ombres/monopi-r5s-rk3568/Kconfig        | 17 ++++
  board/ombres/monopi-r5s-rk3568/Makefile       |  7 ++
- .../monopi-r5s-rk3568/monopi-r5s_rk3568.c     |  3 +
+ .../monopi-r5s-rk3568/monopi-r5s-rk3568.c     |  3 +
  configs/monopi-r5s-rk3568_defconfig           | 97 +++++++++++++++++++
  include/configs/monopi-r5s-rk3568.h           | 17 ++++
  9 files changed, 187 insertions(+), 1 deletion(-)
@@ -19,7 +19,7 @@ Signed-off-by: Carlyon W. Tung <loongs@syuusui.com>
  create mode 100644 arch/arm/dts/rk3568-monopi-r5s.dts
  create mode 100644 board/ombres/monopi-r5s-rk3568/Kconfig
  create mode 100644 board/ombres/monopi-r5s-rk3568/Makefile
- create mode 100644 board/ombres/monopi-r5s-rk3568/monopi-r5s_rk3568.c
+ create mode 100644 board/ombres/monopi-r5s-rk3568/monopi-r5s-rk3568.c
  create mode 100644 configs/monopi-r5s-rk3568_defconfig
  create mode 100644 include/configs/monopi-r5s-rk3568.h
 
@@ -147,11 +147,11 @@ index 00000000..a3a17caf
 +obj-y   += monopi-r5s-rk3568.o
 +
 +
-diff --git a/board/ombres/monopi-r5s-rk3568/monopi-r5s_rk3568.c b/board/ombres/monopi-r5s-rk3568/monopi-r5s_rk3568.c
+diff --git a/board/ombres/monopi-r5s-rk3568/monopi-r5s-rk3568.c b/board/ombres/monopi-r5s-rk3568/monopi-r5s-rk3568.c
 new file mode 100644
 index 00000000..8edec584
 --- /dev/null
-+++ b/board/ombres/monopi-r5s-rk3568/monopi-r5s_rk3568.c
++++ b/board/ombres/monopi-r5s-rk3568/monopi-r5s-rk3568.c
 @@ -0,0 +1,3 @@
 +//
 +// Copyright (C) 2015 - 2029. Hydra Project.
