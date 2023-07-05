@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2016-2019 OpenWrt.org
-# Copyright (C) 2017 LEDE project
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 ARCH:=aarch64

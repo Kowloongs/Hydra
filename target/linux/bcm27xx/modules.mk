@@ -1,5 +1,5 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2019 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/target/linux/bcm27xx/modules/*.mk

@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2019 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 define KernelPackage/hwmon-raspberrypi
   TITLE:=Raspberry Pi voltage monitor

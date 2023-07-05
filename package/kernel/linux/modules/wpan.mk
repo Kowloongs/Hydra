@@ -1,8 +1,6 @@
 #
-# Copyright (C) 2015 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
 
 WPAN_MENU:=WPAN 802.15.4 Support
 

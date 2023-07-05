@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2014 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 define Profile/Broadcom-mips74k-b43
   NAME:=Broadcom SoC, BCM43xx WiFi (b43)

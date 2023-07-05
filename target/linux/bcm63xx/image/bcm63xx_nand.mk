@@ -13,7 +13,7 @@ DEVICE_VARS += SERCOMM_PID SERCOMM_VERSION
 # it's possible to fool CFE into properly loading both cferam and kernel
 # from two different JFFS2 partitions by adding dummy files (see
 # cfe-jffs2-cferam and cfe-jffs2-kernel).
-# Separate JFFS2 partitions allow upgrading openwrt without reflashing cferam
+# Separate JFFS2 partitions allow upgrading Hydra without reflashing cferam
 # JFFS2 partition, which is much safer in case anything goes wrong.
 define Device/bcm63xx-nand
   FILESYSTEMS := squashfs ubifs

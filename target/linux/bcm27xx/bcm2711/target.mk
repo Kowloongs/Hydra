@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 ARCH:=aarch64

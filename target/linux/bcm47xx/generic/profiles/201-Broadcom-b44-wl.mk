@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2010-2013 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 define Profile/Broadcom-b44-wl
   NAME:=Broadcom SoC, b44 Ethernet, BCM43xx WiFi (wl, proprietary)

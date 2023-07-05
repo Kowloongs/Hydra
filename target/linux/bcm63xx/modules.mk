@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2010 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 define KernelPackage/pcmcia-bcm63xx
   SUBMENU:=$(PCMCIA_MENU)
