@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2014-2016 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -45,7 +42,7 @@ define Package/procd/Default
   CATEGORY:=Base system
   DEPENDS:=+ubusd +ubus +libjson-script +ubox +USE_GLIBC:librt +libubox \
 	  +libubus +libblobmsg-json +libjson-c +jshn
-  TITLE:=OpenWrt system process manager
+  TITLE:=Hydra system process manager
   USERID:=:dialout=20 :audio=29
 endef
 
@@ -68,21 +65,21 @@ define Package/procd-ujail
   CATEGORY:=Base system
   DEPENDS:=@KERNEL_NAMESPACES +@KERNEL_UTS_NS +@KERNEL_IPC_NS +@KERNEL_PID_NS \
 	  +libubox +libubus +libuci +libblobmsg-json
-  TITLE:=OpenWrt process jail helper
+  TITLE:=Hydra process jail helper
 endef
 
 define Package/procd-seccomp
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=@SECCOMP +libubox +libblobmsg-json
-  TITLE:=OpenWrt process seccomp helper + utrace
+  TITLE:=Hydra process seccomp helper + utrace
 endef
 
 define Package/uxc
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+procd-ujail +libubus +libubox +libblobmsg-json +blockd +PACKAGE_uxc:rpcd
-  TITLE:=OpenWrt container management
+  TITLE:=Hydra container management
   MAINTAINER:=Daniel Golle <daniel@makrotopia.org>
 endef
 

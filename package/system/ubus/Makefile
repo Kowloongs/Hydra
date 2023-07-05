@@ -24,13 +24,13 @@ define Package/ubus
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+libubus +libblobmsg-json +ubusd
-  TITLE:=OpenWrt RPC client utility
+  TITLE:=Hydra RPC client utility
 endef
 
 define Package/ubusd
   SECTION:=base
   CATEGORY:=Base system
-  TITLE:=OpenWrt RPC daemon
+  TITLE:=Hydra RPC daemon
   DEPENDS:=+libubox +libblobmsg-json
   USERID:=ubus=81:ubus=81
 endef
@@ -40,14 +40,14 @@ define Package/libubus
   CATEGORY:=Libraries
   DEPENDS:=+libubox
   ABI_VERSION:=$(PKG_ABI_VERSION)
-  TITLE:=OpenWrt RPC client library
+  TITLE:=Hydra RPC client library
 endef
 
 define Package/libubus-lua
   SECTION:=libs
   CATEGORY:=Libraries
   DEPENDS:=+libubus +liblua
-  TITLE:=Lua binding for the OpenWrt RPC client
+  TITLE:=Lua binding for the Hydra RPC client
 endef
 
 TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include -flto

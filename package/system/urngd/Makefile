@@ -18,12 +18,12 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/urngd
   SECTION:=utils
   CATEGORY:=Base system
-  TITLE:=OpenWrt non-physical true random number generator based on timing jitter
+  TITLE:=Hydra non-physical true random number generator based on timing jitter
   DEPENDS:=+libubox
 endef
 
 define Package/urngd/description
-  urngd is OpenWrt's micro non-physical true random number generator based on
+  urngd is Hydra's micro non-physical true random number generator based on
   timing jitter.
 
   Using the Jitter RNG core, the rngd provides an entropy source that feeds into

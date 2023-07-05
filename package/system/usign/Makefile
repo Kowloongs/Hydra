@@ -27,7 +27,7 @@ define Package/usign
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+libubox
-  TITLE:=OpenWrt signature verification utility
+  TITLE:=Hydra signature verification utility
 endef
 
 TARGET_CFLAGS += -flto

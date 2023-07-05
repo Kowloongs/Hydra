@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2015 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -15,7 +12,7 @@ PKG_SOURCE_URL=$(PROJECT_GIT)/project/omcproxy.git
 PKG_MIRROR_HASH:=6443276368dc7d45ee58bd7067da6c3a85396d9996039232cae3bdd426382f0c
 PKG_SOURCE_DATE:=2021-11-04
 PKG_SOURCE_VERSION:=bfba2aa75802ff1a70ef2fd3eba53409a8c6e93a
-PKG_MAINTAINER:=Steven Barth <cyrus@openwrt.org>
+PKG_MAINTAINER:=Steven Barth
 PKG_LICENSE:=Apache-2.0
 
 include $(INCLUDE_DIR)/package.mk

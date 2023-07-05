@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2014-2021 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -26,7 +23,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/umdns
   SECTION:=net
   CATEGORY:=Network
-  TITLE:=OpenWrt Multicast DNS Daemon
+  TITLE:=Hydra Multicast DNS Daemon
   DEPENDS:=+libubox +libubus +libblobmsg-json
 endef
 

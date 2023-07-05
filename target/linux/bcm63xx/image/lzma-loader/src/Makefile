@@ -3,10 +3,10 @@
 # Atheros AR7XXX/AR9XXX based boards
 #
 # Copyright (C) 2020 Álvaro Fernández Rojas <noltari@gmail.com>
-# Copyright (C) 2014 Jonas Gorski <jogo@openwrt.org>
-# Copyright (C) 2011 Gabor Juhos <juhosg@openwrt.org>
+# Copyright (C) 2014 Jonas Gorski
+# Copyright (C) 2011 Gabor Juhos
 #
-# Some parts of this file was based on the OpenWrt specific lzma-loader
+# Some parts of this file was based on the Hydra specific lzma-loader
 # for the BCM47xx and ADM5120 based boards:
 #	Copyright (C) 2004 Manuel Novoa III (mjn3@codepoet.org)
 #	Copyright (C) 2005 Mineharu Takahara <mtakahar@yahoo.com>

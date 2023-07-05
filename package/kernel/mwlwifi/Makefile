@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2014-2016 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -19,7 +16,7 @@ PKG_SOURCE_DATE:=2020-02-06
 PKG_SOURCE_VERSION:=a2fd00bb74c35820dfe233d762690c0433a87ef5
 PKG_MIRROR_HASH:=0eda0e774a87e58e611d6436350e1cf2be3de50fddde334909a07a15b0c9862b
 
-PKG_MAINTAINER:=Imre Kaloz <kaloz@openwrt.org>
+PKG_MAINTAINER:=Imre Kaloz
 PKG_BUILD_PARALLEL:=1
 PKG_FLAGS:=nonshared
 

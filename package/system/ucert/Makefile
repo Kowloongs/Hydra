@@ -35,7 +35,7 @@ define Package/ucert-full
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+usign +libubox +libjson-c +libblobmsg-json
-  TITLE:=OpenWrt certificate generation and verification utility
+  TITLE:=Hydra certificate generation and verification utility
   PROVIDES:=ucert
   VARIANT:=full
 endef
@@ -44,7 +44,7 @@ define Package/ucert
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+usign +libubox
-  TITLE:=OpenWrt certificate verification utility
+  TITLE:=Hydra certificate verification utility
   PROVIDES:=ucert
   CONFLICTS:=ucert-full
   VARIANT:=tiny

@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2013-2015 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk
@@ -15,7 +15,7 @@ FAT32_BLOCKS=$(shell echo $$(($(CONFIG_TARGET_BOOTFS_PARTSIZE)*1024*1024/$(FAT32
 define Image/BuildKernel
 	mkimage -A arm -O linux -T kernel -C none \
 		-a 0x40008000 -e 0x40008000 \
-		-n 'ARM OpenWrt Linux-$(LINUX_VERSION)' \
+		-n 'ARM Hydra Linux-$(LINUX_VERSION)' \
 		-d $(KDIR)/zImage $(KDIR)/uImage
 	cp $(KDIR)/uImage $(BIN_DIR)/$(IMG_PREFIX)-uImage
 endef

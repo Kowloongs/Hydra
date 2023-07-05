@@ -110,7 +110,7 @@ $(obj)/%conf-cfg: $(src)/%conf-cfg.sh FORCE
 clean-files += *conf-cfg
 
 # ===========================================================================
-# OpenWrt rules and final adjustments that need to be made after reading the
+# Hydra rules and final adjustments that need to be made after reading the
 # full upstream Makefile
 
 clean-files += $(targets) $(hostprogs)

@@ -20,7 +20,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/firewall4
   SECTION:=net
   CATEGORY:=Base system
-  TITLE:=OpenWrt 4th gen firewall
+  TITLE:=Hydra 4th gen firewall
   DEPENDS:= \
 	+kmod-nft-core +kmod-nft-fib +kmod-nft-offload \
 	+kmod-nft-nat \

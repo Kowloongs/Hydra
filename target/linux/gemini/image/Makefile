@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2009-2018 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk
@@ -149,7 +149,7 @@ GEMINI_NAS_PACKAGES := $(DEFAULT_PACKAGES.nas) \
 #   default firmware will flash it properly as all it knows is WRGG format.
 # - For the sysupgrade, we do not include the rootfs in the kernel image
 #   so it is not needelessly tossed into the RAM by the boot loader.
-#   This will be flashed from OpenWrt userland anyways so we only need
+#   This will be flashed from Hydra userland anyways so we only need
 #   the minimum to make the boot loader happy.
 define Device/dlink_dir-685
 	DEVICE_VENDOR := D-Link

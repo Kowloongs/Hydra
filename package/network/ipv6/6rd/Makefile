@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2010-2012 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -18,7 +15,7 @@ define Package/6rd
   CATEGORY:=Network
   DEPENDS:=@IPV6 +kmod-sit
   TITLE:=6rd configuration support
-  MAINTAINER:=Steven Barth <cyrus@openwrt.org>
+  MAINTAINER:=Steven Barth
   PKGARCH:=all
 endef
 

@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2017-2019 Tomasz Maciej Nowak <tmn505@gmail.com>
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk
@@ -13,7 +13,7 @@ define Build/tegra-sdcard
 		$(foreach dtb,$(DEVICE_DTS),$(CP) $(DTS_DIR)/$(dtb).dtb $@.boot), \
 		$(CP) $(DTS_DIR)/*.dtb $@.boot)
 	mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
-		-n '$(DEVICE_TITLE) OpenWrt bootscript' \
+		-n '$(DEVICE_TITLE) Hydra bootscript' \
 		-d $(BOOT_SCRIPT) \
 		$@.boot/boot.scr
 

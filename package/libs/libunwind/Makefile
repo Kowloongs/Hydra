@@ -1,9 +1,5 @@
 #
-# Copyright (C) 2008-2013 OpenWrt.org
-# Copyright (C) 2017-2019 Yousong Zhou <yszhou4tech@gmail.com>
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk

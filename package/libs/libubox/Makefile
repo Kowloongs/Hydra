@@ -63,7 +63,7 @@ define Package/libubox-lua
   SECTION:=libs
   CATEGORY:=Libraries
   DEPENDS:=+libubox +liblua
-  TITLE:=Lua binding for the OpenWrt Basic utility library
+  TITLE:=Lua binding for the Hydra Basic utility library
 endef
 
 TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include

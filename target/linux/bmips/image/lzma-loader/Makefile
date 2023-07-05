@@ -1,10 +1,5 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
-
 #
-# Copyright (C) 2020 Álvaro Fernández Rojas <noltari@gmail.com>
-# Copyright (C) 2014 Jonas Gorski <jogo@openwrt.org>
-# Copyright (C) 2011 OpenWrt.org
-# Copyright (C) 2011 Gabor Juhos <juhosg@openwrt.org>
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk

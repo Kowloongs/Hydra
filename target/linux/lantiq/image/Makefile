@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2010-2016 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 # boards missing since devicetree update
 #EASY50712 ARV3527P
@@ -42,7 +42,7 @@ define Build/fullimage
 	cat $(IMAGE_KERNEL) $(IMAGE_ROOTFS).new > $@.tmp
 
 	mkimage -A mips -O linux -T multi -a 0x00 -C none \
-		-e 0x00 -n 'OpenWrt fullimage' \
+		-e 0x00 -n 'Hydra fullimage' \
 		-d $@.tmp $@
 
 	rm $(IMAGE_ROOTFS).new

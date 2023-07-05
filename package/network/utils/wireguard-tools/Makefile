@@ -1,10 +1,6 @@
 #
-# Copyright (C) 2016-2019 Jason A. Donenfeld <Jason@zx2c4.com>
-# Copyright (C) 2016 Baptiste Jonglez <openwrt@bitsofnetworks.org>
-# Copyright (C) 2016-2017 Dan Luedtke <mail@danrl.com>
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk

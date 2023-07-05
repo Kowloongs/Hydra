@@ -40,7 +40,7 @@ define Package/refpolicy/description
 	based on the NSA example policy, but aims to accomplish many
 	additional goals.
 
-	The current refpolicy does not fully support OpenWRT and
+	The current refpolicy does not fully support Hydra and
 	needs modifications to work with the default system file
 	layout. These changes should be added as patches to the
 	refpolicy that modify a single SELinux policy.

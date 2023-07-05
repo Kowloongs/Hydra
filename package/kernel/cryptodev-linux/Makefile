@@ -1,10 +1,6 @@
 #
-# Copyright (C) 2014 OpenWrt.org
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
-# $Id$
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk

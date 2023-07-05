@@ -20,7 +20,7 @@ define Package/jsonfilter
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+libubox +libjson-c
-  TITLE:=OpenWrt JSON filter utility
+  TITLE:=Hydra JSON filter utility
   URL:=$(PKG_SOURCE_URL)
 endef
 

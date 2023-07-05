@@ -20,7 +20,7 @@ define Package/netifd
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+libuci +libnl-tiny +libubus +ubus +ubusd +jshn +libubox
-  TITLE:=OpenWrt Network Interface Configuration Daemon
+  TITLE:=Hydra Network Interface Configuration Daemon
 endef
 
 define Package/netifd/conffiles

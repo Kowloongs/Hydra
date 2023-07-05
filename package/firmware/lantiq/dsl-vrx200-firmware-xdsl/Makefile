@@ -1,8 +1,6 @@
-# Copyright (C) 2015 OpenWrt.org
-# Copyright (C) 2015-2016 Lantiq Beteiligungs GmbH & Co KG.
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
+#
 
 include $(TOPDIR)/rules.mk
 

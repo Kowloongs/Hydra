@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2014 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -25,7 +22,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/ugps
   SECTION:=utils
   CATEGORY:=Utilities
-  TITLE:=OpenWrt GPS Daemon
+  TITLE:=Hydra GPS Daemon
   DEPENDS:=+libubox +libubus
 endef
 

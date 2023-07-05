@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2013-2016 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -33,7 +30,7 @@ endef
 define Package/rpcd/default
   SECTION:=utils
   CATEGORY:=Base system
-  TITLE:=OpenWrt ubus RPC backend server
+  TITLE:=Hydra ubus RPC backend server
   DEPENDS:=+libubus +libubox
 endef
 

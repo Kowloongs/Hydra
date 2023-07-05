@@ -24,7 +24,7 @@ define Package/ubox
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+libubox +ubusd +ubus +libubus +libuci +USE_GLIBC:librt
-  TITLE:=OpenWrt system helper toolbox
+  TITLE:=Hydra system helper toolbox
   ALTERNATIVES:=\
     100:/sbin/rmmod:/sbin/kmodloader \
     100:/sbin/insmod:/sbin/kmodloader \
@@ -36,14 +36,14 @@ endef
 define Package/getrandom
   SECTION:=base
   CATEGORY:=Base system
-  TITLE:=OpenWrt getrandom system helper
+  TITLE:=Hydra getrandom system helper
 endef
 
 define Package/logd
   SECTION:=base
   CATEGORY:=Base system
   DEPENDS:=+libubox +libubus +libblobmsg-json +USE_GLIBC:librt
-  TITLE:=OpenWrt system log implementation
+  TITLE:=Hydra system log implementation
   USERID:=logd=514:logd=514
 endef
 

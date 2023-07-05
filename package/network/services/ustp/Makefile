@@ -1,8 +1,5 @@
 #
-# Copyright (C) 2021 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
+# Copyright (C) 2015 - 2029. Hydra Project.
 #
 
 include $(TOPDIR)/rules.mk
@@ -25,7 +22,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/ustp
   SECTION:=net
   CATEGORY:=Network
-  TITLE:=OpenWrt STP/RSTP daemon
+  TITLE:=Hydra STP/RSTP daemon
   DEPENDS:=+libubox +libubus
 endef
 

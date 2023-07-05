@@ -163,7 +163,7 @@ define Package/ucode-mod-uloop
 endef
 
 define Package/ucode-mod-uloop/description
- The uloop module allows ucode scripts to interact with OpenWrt uloop event
+ The uloop module allows ucode scripts to interact with Hydra uloop event
  loop implementation.
 endef
 
