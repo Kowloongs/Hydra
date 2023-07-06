@@ -1,11 +1,11 @@
 From da6015e7f19d749f135f7ac55c4ec47b06faa868 Mon Sep 17 00:00:00 2001
-From: John Crispin <blogic@openwrt.org>
+From: John Crispin
 Date: Fri, 9 Aug 2013 20:12:59 +0200
 Subject: [PATCH 41/53] DT: Add documentation for spi-rt2880
 
 Describe the SPI master found on the MIPS based Ralink RT2880 SoC.
 
-Signed-off-by: John Crispin <blogic@openwrt.org>
+Signed-off-by: John Crispin
 ---
  .../devicetree/bindings/spi/spi-rt2880.txt         |   28 ++++++++++++++++++++
  1 file changed, 28 insertions(+)

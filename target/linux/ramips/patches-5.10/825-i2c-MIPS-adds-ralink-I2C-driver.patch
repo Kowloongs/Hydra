@@ -1,9 +1,9 @@
 From 723b8beaabf3c3c4b1ce69480141f1e926f3f3b2 Mon Sep 17 00:00:00 2001
-From: John Crispin <blogic@openwrt.org>
+From: John Crispin
 Date: Sun, 27 Jul 2014 09:52:56 +0100
 Subject: [PATCH 44/53] i2c: MIPS: adds ralink I2C driver
 
-Signed-off-by: John Crispin <blogic@openwrt.org>
+Signed-off-by: John Crispin
 ---
  .../devicetree/bindings/i2c/i2c-ralink.txt         |   27 ++
  drivers/i2c/busses/Kconfig                         |    4 +

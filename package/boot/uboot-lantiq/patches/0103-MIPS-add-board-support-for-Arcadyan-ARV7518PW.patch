@@ -1,10 +1,10 @@
 From 54a31b334162e8dc2ea891057ddeab42978db8b3 Mon Sep 17 00:00:00 2001
-From: Luka Perkov <luka@openwrt.org>
+From: Luka Perkov
 Date: Sat, 2 Mar 2013 23:34:00 +0100
 Subject: MIPS: add board support for Arcadyan ARV7518
 
-Signed-off-by: Luka Perkov <luka@openwrt.org>
-Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
+Signed-off-by: Luka Perkov
+Signed-off-by: Daniel Schwierzeck
 
 --- /dev/null
 +++ b/board/arcadyan/arv7518pw/Makefile
@@ -40,7 +40,7 @@ Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
 +++ b/board/arcadyan/arv7518pw/arv7518pw.c
 @@ -0,0 +1,51 @@
 +/*
-+ * Copyright (C) 2012 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */
@@ -104,7 +104,7 @@ Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
 +++ b/board/arcadyan/arv7518pw/ddr_settings.h
 @@ -0,0 +1,55 @@
 +/*
-+ * Copyright (C) 2012-2013 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012-2013 Luka Perkov
 + *
 + * This file has been generated with lantiq_ram_extract_magic.awk script.
 + *
@@ -161,20 +161,20 @@ Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
 --- a/boards.cfg
 +++ b/boards.cfg
 @@ -505,6 +505,9 @@ Active  mips        mips32         au1x0
- Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_brn                        arv4519pw:SYS_BOOT_BRN                                                                                                            Luka Perkov <luka@openwrt.org>
- Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_nor                        arv4519pw:SYS_BOOT_NOR                                                                                                            Luka Perkov <luka@openwrt.org>
- Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_ram                        arv4519pw:SYS_BOOT_RAM                                                                                                            Luka Perkov <luka@openwrt.org>
-+Active  mips        mips32         danube      arcadyan        arv7518pw           arv7518pw_brn                        arv7518pw:SYS_BOOT_BRN                                                                                                            Luka Perkov <luka@openwrt.org>
-+Active  mips        mips32         danube      arcadyan        arv7518pw           arv7518pw_nor                        arv7518pw:SYS_BOOT_NOR                                                                                                            Luka Perkov <luka@openwrt.org>
-+Active  mips        mips32         danube      arcadyan        arv7518pw           arv7518pw_ram                        arv7518pw:SYS_BOOT_RAM                                                                                                            Luka Perkov <luka@openwrt.org>
- Active  mips        mips32         danube      lantiq          easy50712           easy50712_nor                        easy50712:SYS_BOOT_NOR                                                                                                            Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
- Active  mips        mips32         danube      lantiq          easy50712           easy50712_norspl                     easy50712:SYS_BOOT_NORSPL                                                                                                         Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
- Active  mips        mips32         danube      lantiq          easy50712           easy50712_ram                        easy50712:SYS_BOOT_RAM                                                                                                            Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
+ Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_brn                        arv4519pw:SYS_BOOT_BRN                                                                                                            Luka Perkov
+ Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_nor                        arv4519pw:SYS_BOOT_NOR                                                                                                            Luka Perkov
+ Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_ram                        arv4519pw:SYS_BOOT_RAM                                                                                                            Luka Perkov
++Active  mips        mips32         danube      arcadyan        arv7518pw           arv7518pw_brn                        arv7518pw:SYS_BOOT_BRN                                                                                                            Luka Perkov
++Active  mips        mips32         danube      arcadyan        arv7518pw           arv7518pw_nor                        arv7518pw:SYS_BOOT_NOR                                                                                                            Luka Perkov
++Active  mips        mips32         danube      arcadyan        arv7518pw           arv7518pw_ram                        arv7518pw:SYS_BOOT_RAM                                                                                                            Luka Perkov
+ Active  mips        mips32         danube      lantiq          easy50712           easy50712_nor                        easy50712:SYS_BOOT_NOR                                                                                                            Daniel Schwierzeck
+ Active  mips        mips32         danube      lantiq          easy50712           easy50712_norspl                     easy50712:SYS_BOOT_NORSPL                                                                                                         Daniel Schwierzeck
+ Active  mips        mips32         danube      lantiq          easy50712           easy50712_ram                        easy50712:SYS_BOOT_RAM                                                                                                            Daniel Schwierzeck
 --- /dev/null
 +++ b/include/configs/arv7518pw.h
 @@ -0,0 +1,69 @@
 +/*
-+ * Copyright (C) 2012-2013 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012-2013 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */

@@ -1,10 +1,10 @@
 From 9f915cf9550a6234adecaf3031c2b279835e14af Mon Sep 17 00:00:00 2001
-From: Luka Perkov <luka@openwrt.org>
+From: Luka Perkov
 Date: Sat, 2 Mar 2013 23:34:00 +0100
 Subject: MIPS: add board support for Arcadyan ARV4519
 
-Signed-off-by: Luka Perkov <luka@openwrt.org>
-Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
+Signed-off-by: Luka Perkov
+Signed-off-by: Daniel Schwierzeck
 
 --- /dev/null
 +++ b/board/arcadyan/arv4519pw/Makefile
@@ -40,7 +40,7 @@ Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
 +++ b/board/arcadyan/arv4519pw/arv4519pw.c
 @@ -0,0 +1,51 @@
 +/*
-+ * Copyright (C) 2012 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */
@@ -104,7 +104,7 @@ Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
 +++ b/board/arcadyan/arv4519pw/ddr_settings.h
 @@ -0,0 +1,55 @@
 +/*
-+ * Copyright (C) 2012-2013 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012-2013 Luka Perkov
 + *
 + * This file has been generated with lantiq_ram_extract_magic.awk script.
 + *
@@ -161,20 +161,20 @@ Signed-off-by: Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
 --- a/boards.cfg
 +++ b/boards.cfg
 @@ -502,6 +502,9 @@ Active  mips        mips32         au1x0
- Active  mips        mips32         au1x00      -               dbau1x00            dbau1550                             dbau1x00:DBAU1550                                                                                                                 Thomas Lange <thomas@corelatus.se>
- Active  mips        mips32         au1x00      -               dbau1x00            dbau1550_el                          dbau1x00:DBAU1550,SYS_LITTLE_ENDIAN                                                                                               Thomas Lange <thomas@corelatus.se>
+ Active  mips        mips32         au1x00      -               dbau1x00            dbau1550                             dbau1x00:DBAU1550                                                                                                                 Thomas Lange
+ Active  mips        mips32         au1x00      -               dbau1x00            dbau1550_el                          dbau1x00:DBAU1550,SYS_LITTLE_ENDIAN                                                                                               Thomas Lange
  Active  mips        mips32         au1x00      -               pb1x00              pb1000                               pb1x00:PB1000                                                                                                                     -
-+Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_brn                        arv4519pw:SYS_BOOT_BRN                                                                                                            Luka Perkov <luka@openwrt.org>
-+Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_nor                        arv4519pw:SYS_BOOT_NOR                                                                                                            Luka Perkov <luka@openwrt.org>
-+Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_ram                        arv4519pw:SYS_BOOT_RAM                                                                                                            Luka Perkov <luka@openwrt.org>
- Active  mips        mips32         danube      lantiq          easy50712           easy50712_nor                        easy50712:SYS_BOOT_NOR                                                                                                            Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
- Active  mips        mips32         danube      lantiq          easy50712           easy50712_norspl                     easy50712:SYS_BOOT_NORSPL                                                                                                         Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
- Active  mips        mips32         danube      lantiq          easy50712           easy50712_ram                        easy50712:SYS_BOOT_RAM                                                                                                            Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
++Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_brn                        arv4519pw:SYS_BOOT_BRN                                                                                                            Luka Perkov
++Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_nor                        arv4519pw:SYS_BOOT_NOR                                                                                                            Luka Perkov
++Active  mips        mips32         danube      arcadyan        arv4519pw           arv4519pw_ram                        arv4519pw:SYS_BOOT_RAM                                                                                                            Luka Perkov
+ Active  mips        mips32         danube      lantiq          easy50712           easy50712_nor                        easy50712:SYS_BOOT_NOR                                                                                                            Daniel Schwierzeck
+ Active  mips        mips32         danube      lantiq          easy50712           easy50712_norspl                     easy50712:SYS_BOOT_NORSPL                                                                                                         Daniel Schwierzeck
+ Active  mips        mips32         danube      lantiq          easy50712           easy50712_ram                        easy50712:SYS_BOOT_RAM                                                                                                            Daniel Schwierzeck
 --- /dev/null
 +++ b/include/configs/arv4519pw.h
 @@ -0,0 +1,69 @@
 +/*
-+ * Copyright (C) 2012-2013 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012-2013 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */

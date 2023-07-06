@@ -50,7 +50,7 @@
 +++ b/include/configs/openwrt-kirkwood-common.h
 @@ -0,0 +1,31 @@
 +/*
-+ * Copyright (C) 2013 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2013 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */

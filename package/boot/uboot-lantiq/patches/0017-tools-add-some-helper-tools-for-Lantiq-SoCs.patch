@@ -161,8 +161,8 @@
 @@ -0,0 +1,116 @@
 +#!/usr/bin/awk -f
 +#
-+# Copyright (C) 2013 Luka Perkov <luka@openwrt.org>
-+# Copyright (C) 2013 Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
++# Copyright (C) 2013 Luka Perkov
++# Copyright (C) 2013 Daniel Schwierzeck
 +#
 +# Usage:
 +#  awk -f lantiq_bdi_conf.awk -v soc=ar9 board=<name> PATH_TO_BOARD/ddr_settings.h
@@ -176,12 +176,12 @@
 +function print_header()
 +{
 +	print ";                                                                         "
-+	print "; Copyright (C) 2013 Luka Perkov <luka@openwrt.org>                       "
-+	print "; Copyright (C) 2013 Daniel Schwierzeck <daniel.schwierzeck@gmail.com>    "
++	print "; Copyright (C) 2013 Luka Perkov                                          "
++	print "; Copyright (C) 2013 Daniel Schwierzeck                                   "
 +	print ";                                                                         "
 +	print "; This file has been generated with lantiq_bdi_conf.awk script.           "
 +	print ";                                                                         "
-+	print "; SPDX-License-Identifier:	GPL-2.0+                                 "
++	print "; SPDX-License-Identifier:	GPL-2.0+                                     "
 +	print ";                                                                         "
 +	print ""
 +}
@@ -279,7 +279,7 @@
 +++ b/tools/lantiq_ram_extract_magic.awk
 @@ -0,0 +1,69 @@
 +#
-+# Copyright (C) 2011-2013 Luka Perkov <luka@openwrt.org>
++# Copyright (C) 2011-2013 Luka Perkov
 +#
 +# Usage:
 +# mips-openwrt-linux-objdump -EB -b binary -m mips:isa32r2 -D YOUR_IMAGE_DUMP | awk -f lantiq_ram_extract_magic.awk
@@ -289,11 +289,11 @@
 +
 +BEGIN {
 +	print "/*                                                                            "
-+	print " * Copyright (C) 2011-2013 Luka Perkov <luka@openwrt.org>                     "
++	print " * Copyright (C) 2011-2013 Luka Perkov                                        "
 +	print " *                                                                            "
 +	print " * This file has been generated with lantiq_ram_extract_magic.awk script.     "
 +	print " *                                                                            "
-+	print " * SPDX-License-Identifier:	GPL-2.0+                                     "
++	print " * SPDX-License-Identifier:	GPL-2.0+                                         "
 +	print " */                                                                           "
 +	print ""
 +
@@ -352,8 +352,8 @@
 @@ -0,0 +1,117 @@
 +#!/usr/bin/awk -f
 +#
-+# Copyright (C) 2011-2012 Luka Perkov <luka@openwrt.org>
-+# Copyright (C) 2012 Daniel Schwierzeck <daniel.schwierzeck@gmail.com>
++# Copyright (C) 2011-2012 Luka Perkov
++# Copyright (C) 2012 Daniel Schwierzeck
 +#
 +# Usage:
 +# awk -f lantiq_ram_init_uart.awk -v soc=<danube|ar9|vr9> PATH_TO_BOARD/ddr_settings.h
@@ -364,12 +364,12 @@
 +function print_header()
 +{
 +	print ";                                                                            "
-+	print "; Copyright (C) 2011-2013 Luka Perkov <luka@openwrt.org>                     "
++	print "; Copyright (C) 2011-2013 Luka Perkov                                        "
 +	print "; Copyright (C) 2012-2013 Daniel Schwierzeck <daniel.schwierzeck@gmail.com>  "
 +	print ";                                                                            "
 +	print "; This file has been generated with lantiq_ram_init_uart.awk script.         "
 +	print ";                                                                            "
-+	print "; SPDX-License-Identifier:	GPL-2.0+                                    "
++	print "; SPDX-License-Identifier:	GPL-2.0+                                        "
 +	print ""
 +}
 +

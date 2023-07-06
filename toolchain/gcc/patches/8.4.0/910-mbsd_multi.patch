@@ -1,5 +1,5 @@
 commit 99368862e44740ff4fd33760893f04e14f9dbdf1
-Author: Felix Fietkau <nbd@openwrt.org>
+Author: Felix Fietkau
 Date:   Tue Jul 31 00:52:27 2007 +0000
 
     Port the mbsd_multi patch from freewrt, which adds -fhonour-copts. This will emit warnings in packages that don't use our target cflags properly

@@ -12,7 +12,7 @@
 +++ b/drivers/net/switch/ar8216.c
 @@ -0,0 +1,114 @@
 +/*
-+ * Copyright (C) 2012 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2012 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */

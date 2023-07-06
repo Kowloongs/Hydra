@@ -1,9 +1,9 @@
 From 7f29222b1731e8182ba94a331531dec18865a1e4 Mon Sep 17 00:00:00 2001
-From: John Crispin <blogic@openwrt.org>
+From: John Crispin
 Date: Sun, 27 Jul 2014 09:31:47 +0100
 Subject: [PATCH 48/53] asoc: add mt7620 support
 
-Signed-off-by: John Crispin <blogic@openwrt.org>
+Signed-off-by: John Crispin
 ---
  arch/mips/ralink/of.c            |    2 +
  sound/soc/Kconfig                |    1 +

@@ -2,7 +2,7 @@
 +++ b/include/configs/openwrt-lantiq-common.h
 @@ -0,0 +1,40 @@
 +/*
-+ * Copyright (C) 2013 Luka Perkov <luka@openwrt.org>
++ * Copyright (C) 2013 Luka Perkov
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */

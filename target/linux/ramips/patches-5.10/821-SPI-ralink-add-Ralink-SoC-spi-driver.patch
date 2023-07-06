@@ -1,12 +1,12 @@
 From 683af4ebb91a1600df1946ac4769d916b8a1be65 Mon Sep 17 00:00:00 2001
-From: John Crispin <blogic@openwrt.org>
+From: John Crispin
 Date: Sun, 27 Jul 2014 11:15:12 +0100
 Subject: [PATCH 42/53] SPI: ralink: add Ralink SoC spi driver
 
 Add the driver needed to make SPI work on Ralink SoC.
 
-Signed-off-by: Gabor Juhos <juhosg@openwrt.org>
-Acked-by: John Crispin <blogic@openwrt.org>
+Signed-off-by: Gabor Juhos
+Acked-by: John Crispin
 ---
  drivers/spi/Kconfig      |    6 +
  drivers/spi/Makefile     |    1 +
@@ -45,11 +45,11 @@ Acked-by: John Crispin <blogic@openwrt.org>
 +/*
 + * spi-rt2880.c -- Ralink RT288x/RT305x SPI controller driver
 + *
-+ * Copyright (C) 2011 Sergiy <piratfm@gmail.com>
-+ * Copyright (C) 2011-2013 Gabor Juhos <juhosg@openwrt.org>
++ * Copyright (C) 2011 Sergiy
++ * Copyright (C) 2011-2013 Gabor Juhos
 + *
 + * Some parts are based on spi-orion.c:
-+ *   Author: Shadi Ammouri <shadi@marvell.com>
++ *   Author: Shadi Ammouri
 + *   Copyright (C) 2007-2008 Marvell Ltd.
 + *
 + * This program is free software; you can redistribute it and/or modify
@@ -569,6 +569,6 @@ Acked-by: John Crispin <blogic@openwrt.org>
 +module_platform_driver(rt2880_spi_driver);
 +
 +MODULE_DESCRIPTION("Ralink SPI driver");
-+MODULE_AUTHOR("Sergiy <piratfm@gmail.com>");
-+MODULE_AUTHOR("Gabor Juhos <juhosg@openwrt.org>");
++MODULE_AUTHOR("Sergiy");
++MODULE_AUTHOR("Gabor Juhos");
 +MODULE_LICENSE("GPL");

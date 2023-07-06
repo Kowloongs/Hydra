@@ -1,9 +1,9 @@
 From 23147af14531cbdada194b94120ef8774f46292d Mon Sep 17 00:00:00 2001
-From: John Crispin <blogic@openwrt.org>
+From: John Crispin
 Date: Thu, 13 Nov 2014 19:08:40 +0100
 Subject: [PATCH 46/53] mmc: MIPS: ralink: add sdhci for mt7620a SoC
 
-Signed-off-by: John Crispin <blogic@openwrt.org>
+Signed-off-by: John Crispin
 ---
  drivers/mmc/host/Kconfig             |    2 +
  drivers/mmc/host/Makefile            |    1 +

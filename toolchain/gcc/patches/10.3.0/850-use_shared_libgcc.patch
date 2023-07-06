@@ -1,5 +1,5 @@
 commit dcfc40358b5a3cae7320c17f8d1cebd5ad5540cd
-Author: Felix Fietkau <nbd@openwrt.org>
+Author: Felix Fietkau
 Date:   Sun Feb 12 20:25:47 2012 +0000
 
     gcc 4.6: port over the missing patch 850-use_shared_libgcc.patch to prevent libgcc crap from leaking into every single binary

@@ -4843,8 +4843,8 @@
 +++ b/arch/mips/include/asm/lantiq/io.h
 @@ -0,0 +1,37 @@
 +/*
-+ * Copyright (C) 2010 John Crispin <blogic@openwrt.org>
-+ * Copyright (C) 2011-2013 Daniel Schwierzeck, daniel.schwierzeck@gmail.com
++ * Copyright (C) 2010 John Crispin
++ * Copyright (C) 2011-2013 Daniel Schwierzeck
 + *
 + * SPDX-License-Identifier:	GPL-2.0+
 + */
