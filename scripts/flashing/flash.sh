@@ -2,9 +2,6 @@
 #
 # tftp flash script for wireless routers
 #
-# Copyright (C) 2004 by Oleg I. Vdovikin <oleg@cs.msu.su>
-# Copyright (C) 2005 by Waldemar Brodkorb <wbx@openwrt.org>
-#
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2 of the License, or

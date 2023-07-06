@@ -1,9 +1,6 @@
 #!/bin/sh
 # map.sh - IPv4-in-IPv6 tunnel backend
 #
-# Author: Steven Barth <cyrus@openwrt.org>
-# Copyright (c) 2014 cisco Systems, Inc.
-#
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2
 # as published by the Free Software Foundation
