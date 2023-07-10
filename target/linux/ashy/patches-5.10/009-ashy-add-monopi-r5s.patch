@@ -38,8 +38,8 @@ index 000000000..e0d75617b
 +#include "rk3399-nanopi4.dtsi"
 +
 +/ {
-+	model = "FriendlyElec NanoPC-T4";
-+	compatible = "friendlyarm,nanopc-t4", "rockchip,rk3399";
++	model = "Ombres Monopi R5S";
++	compatible = "ombres, monopi-r5s", "rockchip,rk3399";
 +
 +	vcc12v0_sys: vcc12v0-sys {
 +		compatible = "regulator-fixed";
