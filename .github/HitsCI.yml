@@ -17,21 +17,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
 
-        
-      - name: Prepare and run build
+      - name: Prepare
         run: |
           sudo apt-get update
           sudo apt install build-essential clang flex bison g++ gawk gcc-multilib g++-multilib gettext git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev file wget libelf-dev asciidoc mercurial subversion sphinxsearch sphinx-common libpam0g-dev elfutils sharutils qemu-utils vim tree lrzsz texinfo ccache openjdk-8-jdk
+
+      - name: Feeds
+        run: |
           cd "$GITHUB_WORKSPACE"
-          cp MonoPi/feeds.conf feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          cp MonoPi/Hydra.x86 .config
+
+      - name: Downloads
+        run: |
+          cp Ombres/Hydra.x86 .config
           make download -j$(nproc)
+
+      - name: Builds
+        run: |
           make -j$(nproc) || make -j1 V=sc
-    
+
+
