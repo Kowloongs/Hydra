@@ -35,7 +35,7 @@ define U-Boot/monopi-r5s-rk3568
   DEPENDS:=+PACKAGE_u-boot-monopi-r5s-rk3568:arm-trusted-firmware-ashy
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-ashy
   ATF:=rk3568_bl31_v1.42.elf
-  DDR:=rk3568_ddr_1560MHz_v1.16.bin
+  TPL:=rk3568_ddr_1560MHz_v1.16.bin
 endef
 
 UBOOT_TARGETS := \
@@ -45,7 +45,7 @@ UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
 UBOOT_MAKE_FLAGS += \
   BL31=$(STAGING_DIR_IMAGE)/$(ATF) \
-  RK_TPL_BIN=$(STAGING_DIR_IMAGE)/$(TPL) \
+  RK_TPL_BIN=$(STAGING_DIR_IMAGE)/$(TPL)
 
 define Build/Configure
 	$(call Build/Configure/U-Boot)
