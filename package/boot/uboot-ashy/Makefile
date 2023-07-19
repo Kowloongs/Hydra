@@ -9,7 +9,7 @@ PKG_VERSION:=9.5.3
 PKG_RELEASE:=$(AUTORELEASE)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL=https://github.com/Kowloongs/Bifrost.git
+PKG_SOURCE_URL=https://github.com/Kowloongs/Bridge.git
 PKG_SOURCE_DATE:=2023-07-17
 PKG_SOURCE_VERSION:=c08cc0902aae4d0cc48db3bb7dd2da6af5cb9fa3
 PKG_MIRROR_HASH:=e6cba279867e6252cdad0cf2d97fc9500635feb354fbe2a5334c22d2c93c9d22
