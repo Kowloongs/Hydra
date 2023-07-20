@@ -124,7 +124,7 @@ CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE=y
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_XZ is not set
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_ZSTD is not set
 CONFIG_EXTERNAL_CPIO=""
-# CONFIG_TARGET_INITRAMFS_FORCE is not set
+CONFIG_TARGET_INITRAMFS_FORCE=y
 
 #
 # Root filesystem archives
@@ -151,8 +151,8 @@ CONFIG_TARGET_IMAGES_GZIP=y
 #
 # Image Options
 #
-CONFIG_TARGET_KERNEL_PARTSIZE=64
-CONFIG_TARGET_ROOTFS_PARTSIZE=1024
+CONFIG_TARGET_KERNEL_PARTSIZE=1024
+CONFIG_TARGET_ROOTFS_PARTSIZE=2048
 CONFIG_TARGET_ROOTFS_PERSIST_VAR=y
 # end of Target Images
 
@@ -467,7 +467,7 @@ CONFIG_VERSION_MANUFACTURER_URL="https://github.com/Kowloongs/Hydra"
 CONFIG_VERSION_BUG_URL="loongs@syuusui.com"
 CONFIG_VERSION_SUPPORT_URL="loongs@syuusui.com"
 CONFIG_VERSION_PRODUCT="NuISG"
-CONFIG_VERSION_HWREV="Hedge"
+CONFIG_VERSION_HWREV="K9LRFSG"
 CONFIG_VERSION_FILENAMES=y
 CONFIG_VERSION_CODE_FILENAMES=y
 CONFIG_PER_FEED_REPO=y
@@ -2685,9 +2685,9 @@ CONFIG_PACKAGE_u-boot-monopi-r5s-rk3568=y
 # CONFIG_PACKAGE_jose is not set
 CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_libjose is not set
-# CONFIG_PACKAGE_nginx is not set
+CONFIG_PACKAGE_nginx=y
 # CONFIG_PACKAGE_nginx-mod-luci-ssl is not set
-# CONFIG_PACKAGE_nginx-util is not set
+CONFIG_PACKAGE_nginx-util=y
 # CONFIG_PACKAGE_tang is not set
 # end of Extra packages
 
@@ -2900,7 +2900,19 @@ CONFIG_PACKAGE_kmod-scsi-generic=y
 #
 # CAN Support
 #
-# CONFIG_PACKAGE_kmod-can is not set
+CONFIG_PACKAGE_kmod-can=y
+# CONFIG_PACKAGE_kmod-can-bcm is not set
+# CONFIG_PACKAGE_kmod-can-c-can is not set
+# CONFIG_PACKAGE_kmod-can-gw is not set
+# CONFIG_PACKAGE_kmod-can-mcp251x is not set
+# CONFIG_PACKAGE_kmod-can-raw is not set
+# CONFIG_PACKAGE_kmod-can-slcan is not set
+# CONFIG_PACKAGE_kmod-can-usb-8dev is not set
+# CONFIG_PACKAGE_kmod-can-usb-ems is not set
+# CONFIG_PACKAGE_kmod-can-usb-esd is not set
+# CONFIG_PACKAGE_kmod-can-usb-kvaser is not set
+# CONFIG_PACKAGE_kmod-can-usb-peak is not set
+# CONFIG_PACKAGE_kmod-can-vcan is not set
 # end of CAN Support
 
 #
@@ -2992,7 +3004,10 @@ CONFIG_PACKAGE_kmod-fs-vfat=y
 #
 # FireWire support
 #
-# CONFIG_PACKAGE_kmod-firewire is not set
+CONFIG_PACKAGE_kmod-firewire=y
+# CONFIG_PACKAGE_kmod-firewire-net is not set
+# CONFIG_PACKAGE_kmod-firewire-ohci is not set
+# CONFIG_PACKAGE_kmod-firewire-sbp2 is not set
 # end of FireWire support
 
 #
@@ -3009,7 +3024,7 @@ CONFIG_PACKAGE_kmod-gpio-cascade=y
 # CONFIG_PACKAGE_kmod-hwmon-adcxx is not set
 # CONFIG_PACKAGE_kmod-hwmon-adt7410 is not set
 # CONFIG_PACKAGE_kmod-hwmon-adt7475 is not set
-# CONFIG_PACKAGE_kmod-hwmon-core is not set
+CONFIG_PACKAGE_kmod-hwmon-core=y
 # CONFIG_PACKAGE_kmod-hwmon-dme1737 is not set
 # CONFIG_PACKAGE_kmod-hwmon-drivetemp is not set
 # CONFIG_PACKAGE_kmod-hwmon-g762 is not set
@@ -3104,13 +3119,13 @@ CONFIG_PACKAGE_kmod-hid-generic=y
 CONFIG_PACKAGE_kmod-input-core=y
 CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-input-gpio-encoder is not set
-# CONFIG_PACKAGE_kmod-input-gpio-keys is not set
+CONFIG_PACKAGE_kmod-input-gpio-keys=y
 # CONFIG_PACKAGE_kmod-input-gpio-keys-polled is not set
 # CONFIG_PACKAGE_kmod-input-joydev is not set
 # CONFIG_PACKAGE_kmod-input-matrixkmap is not set
 # CONFIG_PACKAGE_kmod-input-polldev is not set
 # CONFIG_PACKAGE_kmod-input-touchscreen-ads7846 is not set
-# CONFIG_PACKAGE_kmod-input-uinput is not set
+CONFIG_PACKAGE_kmod-input-uinput=y
 # end of Input modules
 
 #
@@ -3120,7 +3135,7 @@ CONFIG_PACKAGE_kmod-input-leds=y
 CONFIG_PACKAGE_kmod-leds-gpio=y
 # CONFIG_PACKAGE_kmod-leds-pca963x is not set
 # CONFIG_PACKAGE_kmod-leds-tlc591xx is not set
-# CONFIG_PACKAGE_kmod-leds-uleds is not set
+CONFIG_PACKAGE_kmod-leds-uleds=y
 # CONFIG_PACKAGE_kmod-ledtrig-activity is not set
 # CONFIG_PACKAGE_kmod-ledtrig-audio is not set
 # CONFIG_PACKAGE_kmod-ledtrig-gpio is not set
@@ -3149,7 +3164,7 @@ CONFIG_PACKAGE_kmod-lib-crc7=y
 # Multiplexer Support
 #
 CONFIG_PACKAGE_kmod-mux-core=y
-# CONFIG_PACKAGE_kmod-mux-gpio is not set
+CONFIG_PACKAGE_kmod-mux-gpio=y
 # end of Multiplexer Support
 
 #
@@ -3350,11 +3365,11 @@ CONFIG_PACKAGE_kmod-swconfig=y
 # CONFIG_PACKAGE_kmod-switch-bcm53xx is not set
 # CONFIG_PACKAGE_kmod-switch-bcm53xx-mdio is not set
 # CONFIG_PACKAGE_kmod-switch-ip17xx is not set
-# CONFIG_PACKAGE_kmod-switch-rtl8306 is not set
+CONFIG_PACKAGE_kmod-switch-rtl8306=y
 CONFIG_PACKAGE_kmod-switch-rtl8366-smi=y
-# CONFIG_PACKAGE_kmod-switch-rtl8366rb is not set
+CONFIG_PACKAGE_kmod-switch-rtl8366rb=y
 CONFIG_PACKAGE_kmod-switch-rtl8366s=y
-# CONFIG_PACKAGE_kmod-switch-rtl8367b is not set
+CONFIG_PACKAGE_kmod-switch-rtl8367b=y
 # CONFIG_PACKAGE_kmod-tg3 is not set
 # CONFIG_PACKAGE_kmod-tulip is not set
 # CONFIG_PACKAGE_kmod-via-rhine is not set
@@ -3619,7 +3634,7 @@ CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
 # CONFIG_PACKAGE_kmod-usb-serial-simple is not set
 # CONFIG_PACKAGE_kmod-usb-serial-ti-usb is not set
 # CONFIG_PACKAGE_kmod-usb-serial-visor is not set
-# CONFIG_PACKAGE_kmod-usb-storage is not set
+CONFIG_PACKAGE_kmod-usb-storage=y
 # CONFIG_PACKAGE_kmod-usb-storage-extras is not set
 # CONFIG_PACKAGE_kmod-usb-storage-uas is not set
 # CONFIG_PACKAGE_kmod-usb-test is not set
@@ -3628,7 +3643,7 @@ CONFIG_PACKAGE_kmod-usb-wdm=y
 CONFIG_PACKAGE_kmod-usb-xhci-hcd=y
 # CONFIG_PACKAGE_kmod-usb-yealink is not set
 CONFIG_PACKAGE_kmod-usb2=y
-# CONFIG_PACKAGE_kmod-usb2-pci is not set
+CONFIG_PACKAGE_kmod-usb2-pci=y
 CONFIG_PACKAGE_kmod-usb3=y
 # CONFIG_PACKAGE_kmod-usbip is not set
 # CONFIG_PACKAGE_kmod-usbip-client is not set
@@ -3668,7 +3683,15 @@ CONFIG_PACKAGE_kmod-usb3=y
 #
 # W1 support
 #
-# CONFIG_PACKAGE_kmod-w1 is not set
+CONFIG_PACKAGE_kmod-w1=y
+# CONFIG_PACKAGE_kmod-w1-master-ds2482 is not set
+# CONFIG_PACKAGE_kmod-w1-master-ds2490 is not set
+# CONFIG_PACKAGE_kmod-w1-master-gpio is not set
+# CONFIG_PACKAGE_kmod-w1-slave-ds2413 is not set
+# CONFIG_PACKAGE_kmod-w1-slave-ds2431 is not set
+# CONFIG_PACKAGE_kmod-w1-slave-ds2433 is not set
+# CONFIG_PACKAGE_kmod-w1-slave-smem is not set
+# CONFIG_PACKAGE_kmod-w1-slave-therm is not set
 # end of W1 support
 
 #
@@ -3776,12 +3799,12 @@ CONFIG_PACKAGE_MAC80211_MESH=y
 CONFIG_PACKAGE_kmod-rtl8821ae=y
 CONFIG_PACKAGE_kmod-rtl8xxxu=y
 CONFIG_PACKAGE_kmod-rtlwifi=y
-# CONFIG_PACKAGE_RTLWIFI_DEBUG is not set
+CONFIG_PACKAGE_RTLWIFI_DEBUG=y
 CONFIG_PACKAGE_kmod-rtlwifi-btcoexist=y
 CONFIG_PACKAGE_kmod-rtlwifi-pci=y
 CONFIG_PACKAGE_kmod-rtw88=y
-# CONFIG_PACKAGE_RTW88_DEBUG is not set
-# CONFIG_PACKAGE_RTW88_DEBUGFS is not set
+CONFIG_PACKAGE_RTW88_DEBUG=y
+CONFIG_PACKAGE_RTW88_DEBUGFS=y
 # CONFIG_PACKAGE_kmod-wil6210 is not set
 # CONFIG_PACKAGE_kmod-wl12xx is not set
 # CONFIG_PACKAGE_kmod-wl18xx is not set
@@ -5330,7 +5353,7 @@ CONFIG_PACKAGE_luci-base=y
 # CONFIG_LUCI_LANG_ca is not set
 # CONFIG_LUCI_LANG_cs is not set
 # CONFIG_LUCI_LANG_da is not set
-# CONFIG_LUCI_LANG_de is not set
+CONFIG_LUCI_LANG_de=y
 # CONFIG_LUCI_LANG_el is not set
 CONFIG_LUCI_LANG_en=y
 # CONFIG_LUCI_LANG_es is not set
@@ -5538,7 +5561,7 @@ CONFIG_PACKAGE_luci-lib-nixio_openssl=y
 # CONFIG_PACKAGE_luci-i18n-base-ca is not set
 # CONFIG_PACKAGE_luci-i18n-base-cs is not set
 # CONFIG_PACKAGE_luci-i18n-base-da is not set
-# CONFIG_PACKAGE_luci-i18n-base-de is not set
+CONFIG_PACKAGE_luci-i18n-base-de=y
 # CONFIG_PACKAGE_luci-i18n-base-el is not set
 CONFIG_PACKAGE_luci-i18n-base-en=y
 # CONFIG_PACKAGE_luci-i18n-base-es is not set
@@ -5572,7 +5595,7 @@ CONFIG_PACKAGE_luci-i18n-base-zh-tw=y
 # CONFIG_PACKAGE_luci-i18n-clamav-ca is not set
 # CONFIG_PACKAGE_luci-i18n-clamav-cs is not set
 # CONFIG_PACKAGE_luci-i18n-clamav-da is not set
-# CONFIG_PACKAGE_luci-i18n-clamav-de is not set
+CONFIG_PACKAGE_luci-i18n-clamav-de=y
 # CONFIG_PACKAGE_luci-i18n-clamav-el is not set
 CONFIG_PACKAGE_luci-i18n-clamav-en=y
 # CONFIG_PACKAGE_luci-i18n-clamav-es is not set
@@ -5605,7 +5628,7 @@ CONFIG_PACKAGE_luci-i18n-clamav-zh-tw=y
 # CONFIG_PACKAGE_luci-i18n-firewall-ca is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-cs is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-da is not set
-# CONFIG_PACKAGE_luci-i18n-firewall-de is not set
+CONFIG_PACKAGE_luci-i18n-firewall-de=y
 # CONFIG_PACKAGE_luci-i18n-firewall-el is not set
 CONFIG_PACKAGE_luci-i18n-firewall-en=y
 # CONFIG_PACKAGE_luci-i18n-firewall-es is not set
@@ -5639,7 +5662,7 @@ CONFIG_PACKAGE_luci-i18n-firewall-zh-tw=y
 # CONFIG_PACKAGE_luci-i18n-openvpn-ca is not set
 # CONFIG_PACKAGE_luci-i18n-openvpn-cs is not set
 # CONFIG_PACKAGE_luci-i18n-openvpn-da is not set
-# CONFIG_PACKAGE_luci-i18n-openvpn-de is not set
+CONFIG_PACKAGE_luci-i18n-openvpn-de=y
 # CONFIG_PACKAGE_luci-i18n-openvpn-el is not set
 CONFIG_PACKAGE_luci-i18n-openvpn-en=y
 # CONFIG_PACKAGE_luci-i18n-openvpn-es is not set
@@ -5672,7 +5695,7 @@ CONFIG_PACKAGE_luci-i18n-openvpn-zh-tw=y
 # CONFIG_PACKAGE_luci-i18n-opkg-ca is not set
 # CONFIG_PACKAGE_luci-i18n-opkg-cs is not set
 # CONFIG_PACKAGE_luci-i18n-opkg-da is not set
-# CONFIG_PACKAGE_luci-i18n-opkg-de is not set
+CONFIG_PACKAGE_luci-i18n-opkg-de=y
 # CONFIG_PACKAGE_luci-i18n-opkg-el is not set
 CONFIG_PACKAGE_luci-i18n-opkg-en=y
 # CONFIG_PACKAGE_luci-i18n-opkg-es is not set
@@ -6410,8 +6433,57 @@ CONFIG_PACKAGE_clamav=y
 # CONFIG_PACKAGE_lighttpd is not set
 # CONFIG_PACKAGE_nginx-all-module is not set
 # CONFIG_PACKAGE_nginx-mod-luci is not set
-# CONFIG_PACKAGE_nginx-ssl is not set
-# CONFIG_PACKAGE_nginx-ssl-util is not set
+CONFIG_PACKAGE_nginx-ssl=y
+
+#
+# Configuration
+#
+# CONFIG_NGINX_DAV is not set
+CONFIG_NGINX_UBUS=y
+# CONFIG_NGINX_FLV is not set
+# CONFIG_NGINX_STUB_STATUS is not set
+CONFIG_NGINX_HTTP_CHARSET=y
+CONFIG_NGINX_HTTP_GZIP=y
+CONFIG_NGINX_HTTP_SSI=y
+CONFIG_NGINX_HTTP_USERID=y
+CONFIG_NGINX_HTTP_ACCESS=y
+CONFIG_NGINX_HTTP_AUTH_BASIC=y
+# CONFIG_NGINX_HTTP_AUTH_REQUEST is not set
+CONFIG_NGINX_HTTP_AUTOINDEX=y
+CONFIG_NGINX_HTTP_GEO=y
+CONFIG_NGINX_HTTP_MAP=y
+CONFIG_NGINX_HTTP_SPLIT_CLIENTS=y
+CONFIG_NGINX_HTTP_REFERER=y
+CONFIG_NGINX_HTTP_REWRITE=y
+CONFIG_NGINX_HTTP_PROXY=y
+CONFIG_NGINX_HTTP_FASTCGI=y
+CONFIG_NGINX_HTTP_UWSGI=y
+CONFIG_NGINX_HTTP_SCGI=y
+CONFIG_NGINX_HTTP_MEMCACHED=y
+CONFIG_NGINX_HTTP_LIMIT_CONN=y
+CONFIG_NGINX_HTTP_LIMIT_REQ=y
+CONFIG_NGINX_HTTP_EMPTY_GIF=y
+CONFIG_NGINX_HTTP_BROWSER=y
+CONFIG_NGINX_HTTP_UPSTREAM_HASH=y
+CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH=y
+CONFIG_NGINX_HTTP_UPSTREAM_LEAST_CONN=y
+CONFIG_NGINX_HTTP_UPSTREAM_KEEPALIVE=y
+CONFIG_NGINX_HTTP_CACHE=y
+CONFIG_NGINX_HTTP_V2=y
+CONFIG_NGINX_PCRE=y
+CONFIG_NGINX_NAXSI=y
+# CONFIG_NGINX_LUA is not set
+# CONFIG_NGINX_HTTP_REAL_IP is not set
+# CONFIG_NGINX_HTTP_SECURE_LINK is not set
+# CONFIG_NGINX_HTTP_SUB is not set
+CONFIG_NGINX_HEADERS_MORE=y
+# CONFIG_NGINX_HTTP_BROTLI is not set
+# CONFIG_NGINX_STREAM_CORE_MODULE is not set
+# CONFIG_NGINX_RTMP_MODULE is not set
+# CONFIG_NGINX_TS_MODULE is not set
+# end of Configuration
+
+CONFIG_PACKAGE_nginx-ssl-util=y
 # CONFIG_PACKAGE_nginx-ssl-util-nopcre is not set
 # CONFIG_PACKAGE_polipo is not set
 # CONFIG_PACKAGE_privoxy is not set
