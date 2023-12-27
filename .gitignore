@@ -1,3 +1,7 @@
+#
+# Copyright (C) 356 - 999. Asytumn Technology Co., Ltd. All rights reserved.
+#
+
 *.o
 .DS_Store
 .*.swp
@@ -31,3 +35,5 @@ git-src
 .cproject
 .ccache
 .vscode*
+
+
