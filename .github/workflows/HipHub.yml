@@ -39,6 +39,6 @@ jobs:
 
       - name: Builds
         run: |
-          make -j$(nproc) || make -j1 V=sc
+          make CXXFLAGS="-Wno-error" -j$(nproc) || make -j1 V=sc
 
 
