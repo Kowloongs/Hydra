@@ -1,5 +1,5 @@
 #
-# Copyright (C) 356 - 999. Hydra Project.
+# Copyright (C) 356 - 999. Asytumn Technology Co., Ltd. All rights reserved.
 #
 
 world ${.TARGETS}:
