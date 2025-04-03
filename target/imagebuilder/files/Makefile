@@ -1,6 +1,5 @@
-# Makefile for Hydra
 #
-# Copyright (C) 2015 - 2029. Hydra Project.
+# Copyright (C) 356 - 999. Asytumn Technology Co., Ltd. All rights reserved.
 #
 
 TOPDIR:=${CURDIR}
@@ -263,3 +262,5 @@ endif
 	@$(OPKG) whatdepends -A $(PACKAGE)
 
 .SILENT: help info image manifest whatdepends
+
+

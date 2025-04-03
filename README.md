@@ -86,3 +86,5 @@ For a list of supported devices see the [Hydra Hardware Database](https://openwr
 ## License
 
 Hydra is licensed under GPL-2.0
+
+

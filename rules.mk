@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 - 2029. Hydra Project.
+# Copyright (C) 356 - 999. Asytumn Technology Co., Ltd. All rights reserved.
 #
 
 ifneq ($(__rules_inc),1)
@@ -452,3 +452,5 @@ var.%:
 	)
 
 endif #__rules_inc
+
+

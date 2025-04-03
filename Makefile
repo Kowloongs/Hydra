@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 - 2029. Hydra Project.
+# Copyright (C) 356 - 999. Asytumn Technology Co., Ltd. All rights reserved.
 #
 
 TOPDIR:=${CURDIR}
@@ -136,3 +136,5 @@ endif
 .PHONY: clean dirclean prereq prepare world package/symlinks package/symlinks-install package/symlinks-clean
 
 endif
+
+
