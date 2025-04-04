@@ -7,5 +7,7 @@ case $PATH in
 esac
 
 for ELEMENT in $(echo $PATH | tr ":" "\n"); do
-        PATH=$ELEMENT command -v "$@"
+    PATH=$ELEMENT command -v "$@"
 done
+
+
