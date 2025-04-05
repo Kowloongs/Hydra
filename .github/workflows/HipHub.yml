@@ -34,7 +34,7 @@ jobs:
 
       - name: Downloads
         run: |
-          cp Ombres/Hydra.Ashy .config
+          make defconfig
           make download -j$(nproc)
 
       - name: Builds
