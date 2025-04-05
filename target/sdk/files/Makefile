@@ -13,9 +13,9 @@ world:
 DISTRO_PKG_CONFIG:=$(shell $(TOPDIR)/scripts/command_all.sh pkg-config | grep '/usr' | head -n 1)
 export PATH:=$(TOPDIR)/staging_dir/host/bin:$(PATH)
 
-ifneq ($(OPENWRT_BUILD),1)
-  override OPENWRT_BUILD=1
-  export OPENWRT_BUILD
+ifneq ($(HYDRA_BUILD),1)
+  override HYDRA_BUILD=1
+  export HYDRA_BUILD
 
   empty:=
   space:= $(empty) $(empty)

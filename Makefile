@@ -17,11 +17,11 @@ world:
 DISTRO_PKG_CONFIG:=$(shell $(TOPDIR)/scripts/command_all.sh pkg-config | grep '/usr' | head -n 1)
 export PATH:=$(TOPDIR)/staging_dir/host/bin:$(PATH)
 
-ifneq ($(OPENWRT_BUILD),1)
+ifneq ($(HYDRA_BUILD),1)
   _SINGLE=export MAKEFLAGS=$(space);
 
-  override OPENWRT_BUILD=1
-  export OPENWRT_BUILD
+  override HYDRA_BUILD=1
+  export HYDRA_BUILD
   GREP_OPTIONS=
   export GREP_OPTIONS
   CDPATH=

@@ -4,12 +4,12 @@
  
  LTC_CFLAGS += -Wno-type-limits
  
-+ifdef OPENWRT_BUILD
++ifdef HYDRA_BUILD
 +  ifeq (-Os,$(filter -Os,$(CFLAGS)))
 +    LTC_CFLAGS += -DLTC_SMALL_CODE
 +  endif
 +else
-+  ### ! OPENWRT_BUILD
++  ### ! HYDRA_BUILD
 +
  ifdef LTC_DEBUG
  $(info Debug build)
@@ -18,7 +18,7 @@
  endif # COMPILE_SMALL
  endif # COMPILE_DEBUG
  
-+  ### ! OPENWRT_BUILD
++  ### ! HYDRA_BUILD
 +endif
 +
  
@@ -30,8 +30,8 @@
  LTM_CFLAGS += -Wsystem-headers
  endif
  
-+ifndef OPENWRT_BUILD
-+  ### ! OPENWRT_BUILD
++ifndef HYDRA_BUILD
++  ### ! HYDRA_BUILD
 +
  ifdef COMPILE_DEBUG
  #debug
@@ -40,7 +40,7 @@
  
  endif # COMPILE_SIZE
  
-+  ### ! OPENWRT_BUILD
++  ### ! HYDRA_BUILD
 +endif
 +
  ifneq ($(findstring clang,$(CC)),)

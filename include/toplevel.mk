@@ -2,7 +2,7 @@
 # Copyright (C) 2015 - 2029. Hydra Project.
 #
 
-PREP_MK= OPENWRT_BUILD= QUIET=0
+PREP_MK= HYDRA_BUILD= QUIET=0
 
 export IS_TTY=$(if $(MAKE_TERMOUT),1,0)
 
